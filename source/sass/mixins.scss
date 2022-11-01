@@ -74,6 +74,28 @@
   }
 }
 
+
+@mixin font_robotocon($size, $line_height, $weight, $color) {
+  font: {
+    size: $size;
+    weight: $weight;
+  };
+  line-height: $line_height;
+  font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+  color: $color;
+}
+
+
+@mixin font_ptmono($size, $line_height, $weight, $color) {
+  font: {
+    size: $size;
+    weight: $weight;
+  };
+  line-height: $line_height;
+  font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
+  color: $color;
+}
+
 // Mobile first
 
 // @mixin vp-375 {
