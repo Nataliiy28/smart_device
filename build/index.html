@@ -26,8 +26,22 @@
 
 <body>
   <div class="wrapper">
-    <header>
-      <div class="container"></div>
+    <header class="header">
+      <div class="header__wrapper">
+        <a class="header__link header__logo">
+          <picture>
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/logo_desk@1x.webp 1x, img/logo_desk@2x.webp 2x">
+            <source type="image/webp" srcset="img/logo_mob@1x.webp 1x, img/logo_mob@2x.webp 2x">
+
+            <!-- 1х: 202px; 2x: 404px -->
+            <source type="image/png" media="(min-width: 768px)" srcset="img/logo_desk@1x.png 1x, img/logo_desk@2x.png 2x">
+            <!-- 1х: 38px; 2x: 76px -->
+            <source type="image/png" srcset="img/logo_mob@1x.png 1x, img/logo_mob@2x.png 2x">
+
+            <img src="./img/svg/header/logo-brain-mobile.svg" srcset="img/logo_desk@2x.png 2x" alt="Smart Device" width="202" height="52">
+          </picture>
+        </a>
+      </div>
     </header>
     <main>
       <section class="intro">
