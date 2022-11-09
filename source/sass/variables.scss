@@ -1,8 +1,5 @@
 // Colors
 // ---------------------------------
-
-// Default
-
 $color-default-black: #000000;
 $color-default-white: #ffffff;
 $color-transparent: rgba(255, 255, 255, 0);
@@ -24,7 +21,7 @@ $background-color-dark-blue:#026593;
 
 // Gradient
 $black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-
+$background-tringle:rgba(4, 24, 39, 0.5)rotate(-53.1deg);
 // Typography
 // ---------------------------------
 
@@ -33,14 +30,20 @@ $fz-default: 16px;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-rouble: "Rouble",
-"Arial",
-sans-serif;
 
-$ff-placeholder: "Placeholder",
+$PTMono-Regular: "PTMono-Regular",
 "Arial",
-sans-serif;
+"sans-serif";
 
+$RobotoCondensed-Regular: "RobotoCondensed-Regular",
+"Arial",
+"sans-serif";
+$RobotoCondensed-Bold: "RobotoCondensed-Bold",
+"Arial",
+"sans-serif";
+$RobotoCondensed-Light: "RobotoCondensed-Light",
+"Arial",
+"sans-serif";
 // Animation
 // ---------------------------------
 

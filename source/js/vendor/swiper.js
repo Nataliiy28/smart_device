@@ -1,3 +1,5 @@
+import Swiper from 'swiper';
+
 const swiper = () => {
   /**
    * Swiper 7.4.1

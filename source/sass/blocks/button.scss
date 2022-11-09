@@ -1,0 +1,61 @@
+.button {
+  margin: 0;
+  padding: 14px 28px;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: top;
+  text-decoration: none;
+  font-family: $RobotoCondensed-Bold;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $basic-grey;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  background: transparent;
+  transition: 0.3s;
+
+  &--light {
+    border-color: $basic-grey;
+
+    &:hover,
+    &:focus {
+      background: $basic-blue;
+      border-color: $basic-blue;
+    }
+  }
+
+  &--accent {
+    background: $basic-blue;
+
+    &:hover,
+    &:focus {
+      background: transparent;
+      border-color: #ffffff;
+    }
+  }
+
+  &--black {
+    background-color: $font-black;
+    color: $font-white;
+
+    &:hover,
+    &:focus {
+      opacity: 0.7;
+    }
+  }
+}
+
+.button--light-accent {
+  border-color: $basic-blue;
+  color: $basic-blue;
+
+  &:hover,
+  &:focus {
+    color: $color-default-white;
+    background: $basic-blue;
+  }
+}

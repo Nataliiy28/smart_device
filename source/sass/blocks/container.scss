@@ -1,0 +1,18 @@
+.container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 40px;
+    max-width: 1492px; // width 1412px + padding 40px * 2
+    width: 100%;
+  
+    @media (max-width: $vp-1024) {
+      max-width: 100%;
+      width: 100%;
+      padding: 0 25px;
+    }
+  
+    @media (max-width: $vp-768) {
+      padding: 0 15px;
+    }
+  }
+  
