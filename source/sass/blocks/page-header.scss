@@ -15,7 +15,8 @@
 }
 
 .page-header--background {
-  background-color: $background-color-main;
+  // background-color: $background-color-main;
+  background: linear-gradient($background-color-main 80%, transparent);
 }
 
 .page-header__container {

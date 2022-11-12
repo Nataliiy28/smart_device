@@ -1,7 +1,7 @@
 .questions {
   padding: 93px 0 109px;
-  background: url("../../img/form/paper-airplane.svg") no-repeat 8% 230px, $basic-blue;
-  // background: url("../img/form/paper-airplane-desktop.svg") no-repeat 8% 230px no-repeat, rgb(0, 178, 255) linear-gradient(155deg, black, transparent);
+  // background: url("../../img/form/paper-airplane.svg") no-repeat 8% 230px, $basic-blue;
+  background: url("../../img/form/paper-airplane.svg") no-repeat 8% 230px, linear-gradient(to bottom right, rgba(2, 45, 79, 0.7) 30%, 20%, $basic-blue 70%);
   font-family: $PTMono-Regular;
   color: $background-color-whte;
   font-size: 16px;
