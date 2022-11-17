@@ -27,7 +27,7 @@
 
 <body>
   <header class="page-header">
-    <div class="page-header--background">
+    <div class="page-header__background">
       <div class="page-header__top">
         <a class="page-header__logo" href="./index.html">
           <picture>
@@ -168,7 +168,7 @@
           </ul>
         </section>
         <section class="about-company narrow-container">
-          <div class="about-company--block">
+          <div class="about-company__module">
             <h2 class="about-company__title">О компании</h2>
             <p class="about-company__text">Мы поставляем электронные комплектующие, производим печатные платы и
               предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
@@ -179,7 +179,7 @@
               Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов
               крупнейшие Производители светотехники России.</p>
             <a class="button button--light-accent about-company__button" href="#">Подробнее</a>
-            <div class="about-company--block-wrap"> Smart Device - это команда профессионалов. Через нас
+            <div class="about-company__module-wrap"> Smart Device - это команда профессионалов. Через нас
               прошло более 1 000 000 клиентов, 70% из которых
               продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20
               городов присутствия.
@@ -248,27 +248,40 @@
   <footer class="page-footer">
     <div class="page-footer__top container">
       <div class="page-footer__about">
-        <img class="page-footer__logo-img" src="./img/svg/icon-footer/logo-footer.svg" alt="Логотип Smart Device" width="216"
-          height="52">
+        <img class="page-footer__logo-img" src="./img/svg/icon-footer/logo-footer.svg" alt="Логотип Smart Device"
+          width="216" height="52">
         <span class="page-footer__years page-footer__years--top-block">1999-2018 SD Service Devices</span>
         <div class="page-footer__social-wrapper">
           <ul class="page-footer__social-list">
-             <li class="page-footer__social-item">
+            <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--ok" href="#">
-                <!-- <span class="visually-hidden">Smart Device в Одноклассниках</span> -->
+                <span class="visually-hidden">Smart Device в Одноклассниках</span>
+                <svg class="" width="30" height="30">
+                  <use xlink:href="./img/sprite/sprite-one.svg#ok"></use>
+                </svg>
               </a>
             </li>
             <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--vk" href="#">
                 <span class="visually-hidden">Smart Device в ВКонтакте</span>
+                <svg class="" width="30" height="30">
+                  <use xlink:href="./img/sprite/sprite-one.svg#vk"></use>
+                </svg>
               </a>
             </li>
-            <li class="page-footer__social-item">
+            <!-- <li class="page-footer__social-item">
               <a class="page-footer__social-link page-footer__social-link--pin" href="#">
                 <span class="visually-hidden">Smart Device в Пинтересте</span>
               </a>
+            </li> -->
+            <li class="page-footer__social-item">
+              <a class="page-footer__social-link page-footer__social-link--pin" href="#">
+                <span class="visually-hidden">Smart Device в Пинтересте</span>
+                <svg class="" width="30" height="30">
+                  <use xlink:href="./img/sprite/sprite-one.svg#pinterest"></use>
+                </svg>
+              </a>
             </li>
-           
           </ul>
         </div>
       </div>

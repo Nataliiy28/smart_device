@@ -658,11 +658,11 @@ button,
   font-weight: 400;
 }
 
-.about-company--block {
+.about-company__module {
   padding: 53px 25px 4px 270px;
 }
 
-.about-company--block-wrap {
+.about-company__module-wrap {
   display: none;
 }
 
@@ -1254,12 +1254,17 @@ button,
 
 .page-header {
   background: #041827 url("../../img/background/header-bg-desktop.png") no-repeat center;
+  margin-top: -93px;
 }
 
-.page-header--background {
+.page-header__background {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(80%, #041827), to(transparent));
   background: -o-linear-gradient(#041827 80%, transparent);
   background: linear-gradient(#041827 80%, transparent);
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
 .page-header__container {
@@ -1356,12 +1361,13 @@ button,
   font-weight: 700;
   letter-spacing: 0.07em;
   color: #F8FDFF;
-  margin-top: 194px;
+  margin-top: 188px;
+  padding-top: 163px;
 }
 
 .page-header__description {
   position: relative;
-  margin: 27px 0 0 93px;
+  margin: 27px 0 4 93px;
   color: #F8FDFF;
   font-family: "PTMono-Regular", "Arial", "sans-serif";
   font-size: 22px;
