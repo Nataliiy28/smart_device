@@ -1,0 +1,89 @@
+.product {
+  padding: 50px 30px 53px 44px;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: $font-black no-repeat center;
+  background-size: cover;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 63px;
+    height: 63px;
+    bottom: 0;
+    right: 0;
+    background: $basic-blue url("../../img/svg/arrow-button-about.svg") no-repeat center;
+  }
+
+  @media (max-width: $vp-1024) {
+    padding: 40px 30px 53px 44px;
+  }
+
+  @media (max-width: $vp-375) {
+    padding: 20px 30px 53px 35px;
+  }
+
+  &--card {
+    background-image: url("../../img/goods-services/production-printed-desktop.jpeg");
+
+    @media (max-width: $vp-1024) {
+      background-image: url("../../img/goods-services/production-printed-tablet.jpeg");
+    }
+
+    @media (max-width: $vp-375) {
+      background-image: url("../../img/goods-services/mounting-printed-mobile.jpeg");
+    }
+  }
+
+  &--mounting {
+    background-image: url("../../img/goods-services/mounting-printed-desktop.jpeg");
+
+    @media (max-width: $vp-1024) {
+      background-image: url("../../img/goods-services/mounting-printed-tablet.jpeg");
+    }
+
+    @media (max-width: $vp-375) {
+      background-image: url("../../img/goods-services/mounting-printed-mobile.jpeg");
+    }
+  }
+
+  &--components {
+    background-image: url("../../img/goods-services/accessories-lighting-equipment-desktop.jpeg");
+
+    @media (max-width: $vp-1024) {
+      background-image: url("../../img/goods-services/accessories-lighting-equipment-tablet.jpeg");
+    }
+
+    @media (max-width: $vp-375) {
+      background-image: url("../../img/goods-services/accessories-lighting-equipment-mobile.jpeg");
+    }
+  }
+}
+
+.product__link {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $basic-blue;
+    z-index: 5;
+  }
+}
+
+.product__title {
+  @include page-title;
+  font-family: $RobotoCondensed-Regular;
+  font-size: 20px;
+  line-height: 30px;
+  color: $background-color-whte;
+  width: 173px;
+}

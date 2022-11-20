@@ -1,0 +1,103 @@
+.questions {
+  padding: 93px 0 109px;
+  // background: url("../../img/form/paper-airplane.svg") no-repeat 8% 230px, $basic-blue;
+  background: url("../../img/form/paper-airplane.svg") no-repeat 8% 230px, linear-gradient(to bottom right, rgba(2, 45, 79, 0.7) 30%, 20%, $basic-blue 70%);
+  font-family: $PTMono-Regular;
+  color: $background-color-whte;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (max-width: $vp-1024) {
+    padding: 80px 0 103px;
+    background: $basic-blue;
+  }
+
+  @media (max-width: $vp-375) {
+    padding: 30px 0 42px;
+  }
+}
+
+.questions__narrow-container {
+  display: flex;
+}
+
+.questions__wrapper {
+  position: relative;
+  margin-left: auto;
+  width: 49%;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 511px;
+    height: 288px;
+    top: 68px;
+    left: -625px;
+    background: url("../img/paper-airplane.png") no-repeat center;
+  }
+
+  @media (max-width: 1200px) {
+    width: 58%;
+  }
+
+  @media (max-width: $vp-1024) {
+    margin-left: 0;
+    padding: 0 63px;
+    width: 100%;
+
+    &::before {
+      @include visually-hidden;
+    }
+  }
+
+  @media (max-width: $vp-375) {
+    padding: 0;
+  }
+}
+
+.questions__title {
+  @include page-title;
+  margin-bottom: 8px;
+  font-size: 36px;
+  line-height: 51px;
+
+  @media (max-width: $vp-1024) {
+    margin-bottom: 16px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $vp-375) {
+    margin-bottom: 13px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.questions__info {
+  margin-bottom: 51px;
+
+  @media (max-width: $vp-1024) {
+    margin-left: 5px;
+    margin-bottom: 53px;
+  }
+
+  @media (max-width: $vp-375) {
+    margin-left: 0;
+    margin-bottom: 26px;
+  }
+}
+
+.questions__form {
+  @media (max-width: $vp-1024) {
+    margin-left: 4px;
+  }
+
+  @media (max-width: $vp-375) {
+    margin-left: 0;
+  }
+}
+
+.questions__agreement {
+  margin-top: 8px;
+}

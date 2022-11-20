@@ -1,58 +1,73 @@
 // Colors
 // ---------------------------------
-
-// Default
-
-$color-default-black:               #000000;
-$color-default-white:               #ffffff;
-$color-transparent:                 rgba(255, 255, 255, 0);
+$color-default-black: #000000;
+$color-default-white: #ffffff;
+$color-transparent: rgba(255, 255, 255, 0);
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
+$basic-blue:#00B2FF;
+$basic-grey: #F2F5F6;
+$strok-grey: #EBEBEB;
 
-$color-neon-blue:                   #2c39f2;
-$color-torch-red:                   #ff1553;
+// цвет шрифтов
+$font-white:#F2F5F6;
+$font-black:#041827;
+
+// фон
+$background-color-main:#041827;
+$background-color-whte:#F8FDFF;
+$background-color-dark-blue:#026593;
 
 // Gradient
-
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-
+$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$background-tringle:rgba(4, 24, 39, 0.5)rotate(-53.1deg);
 // Typography
 // ---------------------------------
 
 // переменная используемая в html для подключения скейлинга
-$fz-default:                        16px;
+$fz-default: 16px;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
-$ff-rouble:                         "Rouble", "Arial", sans-serif;
 
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$PTMono-Regular: "PTMono-Regular",
+"Arial",
+"sans-serif";
 
+$RobotoCondensed-Regular: "RobotoCondensed-Regular",
+"Arial",
+"sans-serif";
+$RobotoCondensed-Bold: "RobotoCondensed-Bold",
+"Arial",
+"sans-serif";
+$RobotoCondensed-Light: "RobotoCondensed-Light",
+"Arial",
+"sans-serif";
 // Animation
 // ---------------------------------
 
-$tf-default:                        ease;
-$trans-default:                     0.3s $tf-default;
+$tf-default: ease;
+$trans-default: 0.3s $tf-default;
 
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
-$trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
+$trans-modal: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
-$trans-600:                         0.6s $tf-default;
+$trans-600: 0.6s $tf-default;
 
 // Viewports
 // ---------------------------------
 
-$vp-320:                            320px;
-$vp-375:                            375px;
-$vp-768:                            768px;
-$vp-1024:                           1024px;
-$vp-1280:                           1280px;
-$vp-1440:                           1440px;
-$vp-1920:                           1920px;
+$vp-320: 320px;
+$vp-375: 375px;
+$vp-768: 768px;
+$vp-1024: 1024px;
+$vp-1280: 1280px;
+$vp-1440: 1440px;
+$vp-1920: 1920px;
 
 // Retina
 // ---------------------------------
 
-$retina-dpi:                        144dpi;
-$retina-dppx:                       1.5dppx;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;

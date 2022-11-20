@@ -1,0 +1,12 @@
+.narrow-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1262px;
+  width: 100%;
+
+  @media (max-width: $vp-1024) {
+    max-width: 100%;
+    width: 100%;
+  }
+}

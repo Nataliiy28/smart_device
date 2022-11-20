@@ -1,0 +1,48 @@
+.modal-callback__title {
+    @include page-title;
+    margin-bottom: 12px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+  
+  .modal-callback__form-wrapper {
+    flex-direction: column;
+  }
+  
+  .modal-callback__text {
+    margin-bottom: 32px;
+    max-width: 90%;
+  }
+  
+  .modal-callback__form input,
+  .modal-callback__form textarea {
+    padding: 14px 16px 14px 24px;
+    margin-bottom: 30px;
+  }
+  
+  .modal-callback input {
+    width: 100%;
+  }
+  
+  .modal-callback textarea {
+    margin-bottom: 24px;
+    min-height: 104px;
+  }
+  
+  .modal-callback input[type="checkbox"] + label {
+    margin-left: 48px;
+    padding-right: 2px;
+  
+    &::before {
+      top: 2px;
+      left: -49px;
+    }
+  }
+  
+  .modal-callback button[type="submit"] {
+    margin: 0;
+    margin-bottom: 34px;
+    width: 100%;
+    min-width: 100%;
+  }
+  

@@ -74,6 +74,52 @@
   }
 }
 
+
+@mixin font_robotocon($size, $line_height, $weight, $color) {
+  font: {
+    size: $size;
+    weight: $weight;
+  };
+  line-height: $line_height;
+  font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
+  color: $color;
+}
+
+
+@mixin font_ptmono($size, $line_height, $weight, $color) {
+  font: {
+    size: $size;
+    weight: $weight;
+  };
+  line-height: $line_height;
+  font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
+  color: $color;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+@mixin page-title {
+  font-family: $RobotoCondensed-Regular;
+  font-weight: 400;
+}
+
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 // Mobile first
 
 // @mixin vp-375 {
