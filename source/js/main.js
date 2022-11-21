@@ -1,5 +1,11 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+import { iosVhFix } from './utils/ios-vh-fix';
+import { initModals } from './modules/modals/init-modals';
+
+const button = document.querySelector('.about-company__button');
+const youdiv = document.querySelector('.about-company__text-detalied');
+button.addEventListener('click', function () {
+  youdiv.style.display = youdiv.style.display === 'none' ? 'block' : 'none';
+});
 
 // ---------------------------------
 
