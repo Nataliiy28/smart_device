@@ -61,10 +61,6 @@
   padding: 53px 25px 4px 270px;
 }
 
-.about-company__module-wrap {
-  display: none;
-}
-
 .about-company__text {
   margin-bottom: 6px;
   padding-bottom: 20px;
@@ -84,8 +80,8 @@
 }
 
 .about-company__button {
-  margin-top: 18px;
   min-width: 123px;
+  margin-top: 50px;
 
   @media (max-width: $vp-1024) {
     margin: 22px 0 0 3px;
