@@ -1376,7 +1376,7 @@ button,
 }
 
 .page-header__button-consultation {
-  margin: 43px 0 0 93px;
+  margin: 43px 0 0 0;
   padding: 17px 44px;
   font-size: 16px;
   line-height: 19px;
