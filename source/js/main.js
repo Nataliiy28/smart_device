@@ -1,11 +1,19 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
+//-----------------------------------кнопка подробнее
 
 const button = document.querySelector('.about-company__button');
 const youdiv = document.querySelector('.about-company__text-detalied');
 button.addEventListener('click', function () {
   youdiv.style.display = youdiv.style.display === 'none' ? 'block' : 'none';
 });
+
+//----------------------------------смена текста в кнопке подробнее-свернуть
+const btn = document.querySelector('.about-company__button');
+btn.addEventListener('click', function () {
+  btn.innerHTML =
+    (btn.innerHTML === 'Подробнее') ? btn.innerHTML = 'Скрыть всё' : btn.innerHTML = 'Свернуть';
+})
 
 // ---------------------------------
 
