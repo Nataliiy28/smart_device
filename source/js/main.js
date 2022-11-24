@@ -1,5 +1,6 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
+
 //-----------------------------------кнопка подробнее
 
 const button = document.querySelector('.about-company__button');

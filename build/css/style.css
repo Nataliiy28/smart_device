@@ -1276,10 +1276,10 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 33px 320px 33px 320px;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  padding: 33px 0 33px 0;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
