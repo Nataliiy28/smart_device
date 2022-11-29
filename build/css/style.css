@@ -1464,9 +1464,7 @@ button,
 
 .questions {
   padding: 93px 0 109px;
-  background: url("../../img/form/paper-airplane.svg") no-repeat 8% 230px, -webkit-gradient(linear, left top, right bottom, color-stop(30%, rgba(2, 45, 79, 0.7)), color-stop(20%), color-stop(70%, #00B2FF));
-  background: url("../../img/form/paper-airplane.svg") no-repeat 8% 230px, -o-linear-gradient(top left, rgba(2, 45, 79, 0.7) 30%, 20%, #00B2FF 70%);
-  background: url("../../img/form/paper-airplane.svg") no-repeat 8% 230px, linear-gradient(to bottom right, rgba(2, 45, 79, 0.7) 30%, 20%, #00B2FF 70%);
+  background: #00B2FF;
   font-family: "PTMono-Regular", "Arial", "sans-serif";
   color: #F8FDFF;
   font-size: 16px;
@@ -1492,7 +1490,7 @@ button,
   height: 288px;
   top: 68px;
   left: -625px;
-  background: url("../img/paper-airplane.png") no-repeat center;
+  background: url("../../img/form/paper-airplane.svg") no-repeat center;
 }
 
 .questions__title {
