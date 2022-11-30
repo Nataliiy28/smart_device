@@ -1267,6 +1267,10 @@ button,
   top: 0;
 }
 
+.page-header__intro {
+  padding-left: 272px;
+}
+
 .page-header__container {
   position: relative;
   min-height: 880px;
@@ -1475,6 +1479,10 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.questions__wrapper-background {
+  background-color: #026593;
 }
 
 .questions__wrapper {

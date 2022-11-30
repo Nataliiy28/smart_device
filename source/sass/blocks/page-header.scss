@@ -27,11 +27,10 @@
     max-width: $vp-768;
     padding: 10px 33px 20px 33px;
   }
+}
 
-  // @media (max-width: $vp-375) {
-  //   max-width: $vp-375;
-  //   padding: 10px 15px 20px 15px;
-  // }
+.page-header__intro {
+  padding-left: 272px;
 }
 
 .page-header__container {

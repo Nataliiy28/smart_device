@@ -1,7 +1,8 @@
 .questions {
   padding: 93px 0 109px;
   background: $basic-blue;
-  // background: url("../../img/form/paper-airplane.svg") no-repeat 8% 230px, linear-gradient(to bottom right, rgba(2, 45, 79, 0.7) 30%, 20%, $basic-blue 70%);
+  // background: 8% 230px, linear-gradient(to bottom right, rgba(2, 45, 79, 0.7) 30%, 20%, $basic-blue 70%);
+  // background-image: linear-gradient(to top, rgb(207, 207, 213) 0%, rgb(135, 129, 129) 50%, rgb(207, 207, 213) 100%);
   font-family: $PTMono-Regular;
   color: $background-color-whte;
   font-size: 16px;
@@ -19,6 +20,12 @@
 
 .questions__narrow-container {
   display: flex;
+}
+
+.questions__wrapper-background {
+  background-color: $background-color-dark-blue;
+
+
 }
 
 .questions__wrapper {
