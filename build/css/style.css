@@ -2120,8 +2120,25 @@ button,
     background: url("../../img/background/header-bg-mobile.png") center, url("../img/intro-background-mobile.png") no-repeat top center, #041827;
   }
 
+  .page-header__background {
+    max-width: 768px;
+    padding: 10px 33px 20px 33px;
+  }
+
   .page-header__container {
     min-height: 647px;
+    padding-top: 49px;
+    padding-bottom: 98px;
+  }
+
+  .page-header__top {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    padding-left: 55px;
   }
 }
 
@@ -2225,6 +2242,9 @@ button,
   }
 
   .page-header__top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     padding: 16px 0;
   }
 

@@ -22,6 +22,16 @@
   position: fixed;
   left: 0;
   top: 0;
+
+  @media (max-width: $vp-768) {
+    max-width: $vp-768;
+    padding: 10px 33px 20px 33px;
+  }
+
+  // @media (max-width: $vp-375) {
+  //   max-width: $vp-375;
+  //   padding: 10px 15px 20px 15px;
+  // }
 }
 
 .page-header__container {
@@ -34,7 +44,10 @@
 
   @media (max-width: $vp-768) {
     min-height: 647px;
+    padding-top: 49px;
+    padding-bottom: 98px;
   }
+
 }
 
 .page-header__top {
@@ -48,7 +61,16 @@
     padding: 20px 50px 20px 50px;
   }
 
+  @media (max-width:$vp-768) {
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-right: 80px;
+    padding-bottom: 20px;
+    padding-left: 55px;
+  }
+
   @media (max-width: $vp-375) {
+    display: flex;
     padding: 16px 0;
   }
 }
