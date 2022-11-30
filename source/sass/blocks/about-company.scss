@@ -59,6 +59,10 @@
 
 .about-company__module {
   padding: 53px 25px 4px 270px;
+
+  @media (max-width: $vp-768) {
+   padding: 20px 15px 25px 15px;
+  }
 }
 
 .about-company__text {

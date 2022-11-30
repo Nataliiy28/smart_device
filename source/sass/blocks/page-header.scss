@@ -30,7 +30,14 @@
 }
 
 .page-header__intro {
-  padding-left: 272px;
+  // padding-left: 272px;
+
+  @media (max-whidth: $vp-768) {
+    padding-left: 0;
+    position: absolute;
+    left: 44px;
+    top: -145px;
+  }
 }
 
 .page-header__container {
@@ -43,7 +50,7 @@
 
   @media (max-width: $vp-768) {
     min-height: 647px;
-    padding-top: 49px;
+    padding-top: 1px;
     padding-bottom: 98px;
   }
 

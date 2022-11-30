@@ -1267,10 +1267,6 @@ button,
   top: 0;
 }
 
-.page-header__intro {
-  padding-left: 272px;
-}
-
 .page-header__container {
   position: relative;
   min-height: 880px;
@@ -2038,6 +2034,10 @@ button,
     line-height: 39px;
   }
 
+  .about-company__module {
+    padding: 20px 15px 25px 15px;
+  }
+
   .about-company__text {
     margin-bottom: 41px;
   }
@@ -2110,7 +2110,8 @@ button,
   }
 
   .container {
-    padding: 0 15px;
+    padding: 20px 15px;
+    max-width: 100%;
   }
 
   .goods__title {
@@ -2135,7 +2136,7 @@ button,
 
   .page-header__container {
     min-height: 647px;
-    padding-top: 49px;
+    padding-top: 1px;
     padding-bottom: 98px;
   }
 
@@ -2186,7 +2187,7 @@ button,
   }
 
   .page-footer__social-wrapper {
-    margin-top: 30px;
+    margin-top: 6px;
   }
 
   .page-footer__links-and-contacts {
@@ -2379,5 +2380,14 @@ button,
 @media (min-width: 1270px) and (max-width: 1480px) {
   .page-footer__contacts {
     width: 40%;
+  }
+}
+
+@media (max-whidth: 768px) {
+  .page-header__intro {
+    padding-left: 0;
+    position: absolute;
+    left: 44px;
+    top: -145px;
   }
 }
