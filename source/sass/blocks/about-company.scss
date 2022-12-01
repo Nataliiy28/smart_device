@@ -59,10 +59,10 @@
 
 .about-company__module {
   padding: 53px 25px 4px 270px;
-}
 
-.about-company__module-wrap {
-  display: none;
+  @media (max-width: $vp-768) {
+   padding: 20px 15px 25px 15px;
+  }
 }
 
 .about-company__text {
@@ -83,9 +83,13 @@
   }
 }
 
+.about-company__text-detalied {
+  margin-bottom: 21px;
+}
+
 .about-company__button {
-  margin-top: 18px;
   min-width: 123px;
+  margin-top: 50px;
 
   @media (max-width: $vp-1024) {
     margin: 22px 0 0 3px;

@@ -32,11 +32,11 @@
         <a class="page-header__logo" href="./index.html">
           <picture>
             <!-- <source type="image/webp" media="(min-width: 1200px)"
-            srcset="./img/catalog/gallery/non-native-desktop.webp 1x, ./img/catalog/gallery/non-native-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="./img/catalog/gallery/non-native-tablet.webp 1x, ./img/catalog/gallery/non-native-tablet@2x.webp 2x">
-          <source type="image/webp"
-            srcset="./img/catalog/gallery/non-native-mobile.webp 1x, ./img/catalog/gallery/non-native-mobile@2x.webp 2x"> -->
+              srcset="./img/svg/header/logo-brain-desktop.webp 1x, ./img/svg/header/logo-brain-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="./img/svg/header/logo-brain-tablet.webp 1x, ./img/svg/header/logo-brain-tablet@2x.webp 2x">
+            <source type="image/webp"
+              srcset="./img/svg/header/logo-brain-mobile.webp 1x, ./img/svg/header/logo-brain-mobile@2x.webp 2x"> -->
             <source media="(min-width:1200px)" srcset="./img/svg/header/logo-brain-desktop.svg">
             <source media="(min-width:768px)" srcset="./img/svg/header/logo-brain-tablet.svg">
             <img class="page-header__logo-img" src="./img/svg/header/logo-brain-mobile.svg" width="35" height="35"
@@ -61,7 +61,7 @@
         <a class="button button--accent page-header__button-consultation" href="#consultation">Получить бесплатную
           консультацию</a>
       </div>
-      <a class="page-header__scroll-btn page-header__tablet-hidden" href="#benefits">Скролл вниз</a>
+      <a class="page-header__scroll-btn page-header__tablet-hidden visually-hidden" href="#benefits">Скролл вниз</a>
     </div>
   </header>
   <main>
@@ -179,7 +179,8 @@
               Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов
               крупнейшие Производители светотехники России.</p>
             <a class="button button--light-accent about-company__button" href="#">Подробнее</a>
-            <div class="about-company__module-wrap"> Smart Device - это команда профессионалов. Через нас
+            <div class="about-company__text-detalied" style="display: none;">Smart Device - это команда профессионалов.
+              Через нас
               прошло более 1 000 000 клиентов, 70% из которых
               продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20
               городов присутствия.
@@ -222,6 +223,7 @@
       <div class="container">
         <div class="narrow-container questions__narrow-container">
           <div class="questions__wrapper">
+            <div class="triangle-right"></div>
             <h2 class="questions__title">Остались вопросы? Задайте их нам!</h2>
             <p class="questions__info">Мы проконсультируем Вас бесплатно</p>
             <form class="site-form questions__form" action="#">
@@ -362,8 +364,7 @@
     </div>
   </section>
   <div class="overlay"></div>
-  <script src="./js/buttton-clarify.js"></script>
-  <script src="./js/main.js"></script>
+  <script src="../build/js/main.min.js"></script>
 </body>
 
 </html>
