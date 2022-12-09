@@ -1069,7 +1069,6 @@ button,
 }
 
 .page-footer__top {
-  margin-bottom: 59px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1229,10 +1228,6 @@ button,
 
 .page-footer__rights {
   margin-right: 70px;
-}
-
-.page-footer__years {
-  margin-right: 10%;
 }
 
 .page-footer__years--top-block {
@@ -1677,12 +1672,6 @@ button,
   }
 }
 
-@media (max-width: 1100px) {
-  .page-footer__years {
-    margin-right: 4%;
-  }
-}
-
 @media (max-width: 1024px) {
   .about-company__title {
     margin-bottom: 24px;
@@ -1841,8 +1830,7 @@ button,
     padding-bottom: 22px;
   }
 
-  .page-footer__rights,
-  .page-footer__years {
+  .page-footer__rights {
     display: none;
   }
 
