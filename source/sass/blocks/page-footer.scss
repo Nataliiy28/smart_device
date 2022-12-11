@@ -200,7 +200,8 @@
     padding-left: 20px;
   }
 
-  @media (max-width: $vp-375) {
+  @media (max-width: $vp-768) {
+    flex-direction: column;
     margin-bottom: 26px;
   }
 }
