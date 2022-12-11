@@ -173,10 +173,24 @@ const button = document.querySelector('.about-company__button');
 const youdiv = document.querySelector('.about-company__text-detalied');
 button.addEventListener('click', function () {
   youdiv.style.display = youdiv.style.display === 'none' ? 'block' : 'none';
-  button.innerHTML = (button.innerHTML === 'Подробнее') ? button.innerHTML = 'Скрыть всё' : button.innerHTML = 'Свернуть';
+  button.innerHTML = (button.innerHTML === 'Подробнее') ? button.innerHTML = 'Скрыть всё' : button.innerHTML = 'Подробнее';
 });
 
 // ---------------------------------
+
+//----------------------------------кнопка аккордиона +-
+
+const PlusButtonElement = document.querySelectorAll('.page-footer__title');
+PlusButtonElement.forEach(element => element.addEventListener('click', function () {
+  // PlusButtonElement.classList.add('hide-after');
+  if (element.classList.contains('hide_after')) {
+    element.classList.remove('hide_after');
+  } else {
+    element.classList.add('hide_after');
+  }
+}));
+
+//-------------------------------------
 
 window.addEventListener('DOMContentLoaded', () => {
 

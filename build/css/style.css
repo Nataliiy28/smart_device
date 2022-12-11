@@ -1644,6 +1644,14 @@ button,
   color: rgb(255, 255, 255);
 }
 
+.hide-before:before {
+  display: none;
+}
+
+.hide_after:after {
+  display: none;
+}
+
 @media (min-width: 1025px) {
   .page-footer__years--top-block {
     position: absolute;
