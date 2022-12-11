@@ -284,8 +284,48 @@
         </div>
       </div>
       <div class="page-footer__links-and-contacts">
-        <div class="page-footer__sections accordion">
-          <span class="page-footer__title accordion__toggle">Разделы сайта</span>
+        <div data-accordion="1" class="page-footer__sections accordion">
+          <details>
+            <summary class="page-footer__title accordion__toggle">Разделы сайта</summary>
+            <p class="page-footer__section-item">
+              <a class="page-footer__link" href="#">О компании</a>
+            </p>
+            <p class="page-footer__section-item">
+              <a class="page-footer__link" href="#">Продукты</a>
+            </p>
+            <p class="page-footer__section-item">
+              <a class="page-footer__link" href="#">Производство печатных плат</a>
+            </p>
+            <p class="page-footer__section-item">
+              <a class="page-footer__link" href="#">Монтаж печатных плат</a>
+            </p>
+          </details>
+
+          <div data-accordion="2" class="page-footer__sections accordion">
+            <details>
+              <summary class="page-footer__title accordion__toggle">Наш офис</summary>
+
+              <!-- <div class="page-footer__address-wrapper page-footer__accordion-wrapper accordion__content"> -->
+                <p class="page-footer__address">г. Мытищи, Олимпийский проспект, д.10</p>
+                <!-- <ul class="page-footer__phones-list"> -->
+                  <p class="page-footer__phone-item">
+                    <a class="page-footer__link page-footer__phone-number" href="tel:+74955894050">+7 (495) 589-40-50</a>
+                  </p>
+                  <p class="page-footer__phone-item">
+                    <a class="page-footer__link page-footer__phone-number" href="tel:+79250038767">+7 (925) 003-87-67</a>
+                  </p>
+                  <p class="page-footer__phone-item">
+                    <a class="page-footer__link page-footer__phone-number" href="tel:+792692608079">+7 (926) 926-080-79</a>
+                  </p>
+                <!-- </ul> -->
+              <!-- </div> -->
+            </details>
+      
+        
+          </div>
+
+        <!-- <div class="page-footer__sections accordion"> -->
+          <!-- <span class="page-footer__title accordion__toggle">Разделы сайта</span>
           <div class="page-footer__sections-wrapper page-footer__accordion-wrapper accordion__content">
             <ul class="page-footer__sections-list">
               <li class="page-footer__section-item">
@@ -313,8 +353,8 @@
               </li>
             </ul>
           </div>
-        </div>
-        <div class="page-footer__contacts accordion">
+        </div> -->
+        <!-- <div class="page-footer__contacts accordion">
           <span class="page-footer__title accordion__toggle">Наш офис</span>
           <div class="page-footer__address-wrapper page-footer__accordion-wrapper accordion__content">
             <span class="page-footer__address">г. Мытищи, Олимпийский проспект, д.10</span>
@@ -330,7 +370,7 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
     <div class="page-footer__bottom">
