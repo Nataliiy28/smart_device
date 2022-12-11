@@ -196,6 +196,7 @@
 
   @media (max-width: $vp-375) {
     // margin: 212px 0 0;
+    margin-left: 32px;
     font-size: 40px;
     line-height: 47px;
     max-width: 100%;
@@ -220,7 +221,7 @@
   }
 
   @media (max-width: $vp-375) {
-    margin: 27px 0 0 51px;
+    margin: 27px 0 0 25px;
     font-size: 16px;
     line-height: 25px;
     max-width: 100%;
@@ -239,7 +240,8 @@
   }
 
   @media (max-width: $vp-375) {
-    margin: 40px 0 0;
+    margin: 50px 0px 10px 25px;
+    padding: 17px 10px 17px 10px;
   }
 }
 
