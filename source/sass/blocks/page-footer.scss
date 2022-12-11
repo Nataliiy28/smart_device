@@ -121,15 +121,15 @@
   }
 
   &--pin {
-    background-image: url("../../img/svg/icon-footer/pinterest.svg");
+    background-image: url("../img/svg/icon-footer/pinterest.svg");
   }
 
   &--ok {
-    background-image: url("../../img/svg/icon-footer/ok.svg");
+    background-image: url("../img/svg/icon-footer/ok.svg");
   }
 
   &--vk {
-    background-image: url("../../img/svg/icon-footer/vk.svg");
+    background-image: url("../img/svg/icon-footer/vk.svg");
   }
 }
 
@@ -189,11 +189,15 @@
   display: flex;
 
   @media (min-width: 1024px) and (max-width: 1269px) {
-    flex-direction: column;
+    flex-direction: unset;
+    gap: 15%;
+    padding-left: 20px;
   }
 
   @media (max-width: $vp-1024) {
-    flex-direction: column;
+    flex-direction: unset;
+    gap: 15%;
+    padding-left: 20px;
   }
 
   @media (max-width: $vp-375) {
