@@ -1,18 +1,21 @@
 .page-header {
-  background: $font-black url("../../img/background/header-bg-desktop.png") no-repeat center;
-  margin-top: -93px;
+  background: $font-black url("../img/background/header-bg-desktop.png") no-repeat center;
+  // margin-top: -93px;
   // background-size: 100%;
+  width: 100%;
 
   @media (max-width: $vp-1024) {
-    background: url("../../img/background/header-bg-tablet.png") center,
-      url("../../img/background/header-bg-desktop.png") no-repeat top right,
-      $font-black
+    background: url("../img/background/header-bg-tablet.png") center,
+      url("../img/background/header-bg-desktop.png") no-repeat top right,
+      $font-black;
+      width: 100%;
   }
 
   @media (max-width: $vp-768) {
     background: url("../../img/background/header-bg-mobile.png") center,
       url("../img/intro-background-mobile.png") no-repeat top center,
-      $font-black
+      $font-black;
+      width: 100%;
   }
 }
 
@@ -24,13 +27,12 @@
   top: 0;
 
   @media (max-width: $vp-768) {
-    max-width: $vp-768;
-    padding: 10px 33px 20px 33px;
+    // max-width: $vp-768;
+    padding: 20px 33px 20px 33px;
   }
 }
 
 .page-header__intro {
-  // padding-left: 272px;
 
   @media (max-whidth: $vp-768) {
     padding-left: 0;
@@ -58,7 +60,7 @@
 
 .page-header__top {
   display: flex;
-  padding: 33px 0 33px 0;
+  padding: 33px 26px 33px 30px;
   justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
@@ -184,7 +186,7 @@
   font-weight: 700;
   letter-spacing: 0.07em;
   color: $background-color-whte;
-  margin-top: 188px;
+  margin-top: 0;
   padding-top: 163px;
 
   @media (max-width: $vp-1024) {
@@ -192,6 +194,7 @@
     font-size: 60px;
     line-height: 70px;
     max-width: 470px;
+    margin-top: 0;
   }
 
   @media (max-width: $vp-375) {

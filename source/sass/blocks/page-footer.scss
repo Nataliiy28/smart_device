@@ -181,7 +181,9 @@
 
 .page-footer__sections {
   @media (max-width: $vp-375) {
+    padding-top: 16px;
     margin-bottom: 27px;
+    border-top: 1px solid white;
   }
 }
 

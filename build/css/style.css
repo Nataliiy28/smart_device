@@ -905,6 +905,7 @@ button,
   margin-bottom: 12px;
   font-size: 28px;
   line-height: 39px;
+  margin-top: 0;
 }
 
 .modal-callback__form-wrapper {
@@ -973,9 +974,10 @@ button,
 
 .modal__wrapper {
   margin-bottom: 40px;
-  padding: 31px 40px 37px;
+  padding: 40px 40px 20px 40px;
   position: absolute;
-  width: 490px;
+  width: 500px;
+  height: 610px;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -1248,8 +1250,8 @@ button,
 }
 
 .page-header {
-  background: #041827 url("../../img/background/header-bg-desktop.png") no-repeat center;
-  margin-top: -93px;
+  background: #041827 url("../img/background/header-bg-desktop.png") no-repeat center;
+  width: 100%;
 }
 
 .page-header__background {
@@ -1271,7 +1273,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 33px 0 33px 0;
+  padding: 33px 26px 33px 30px;
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
@@ -1356,7 +1358,7 @@ button,
   font-weight: 700;
   letter-spacing: 0.07em;
   color: #F8FDFF;
-  margin-top: 188px;
+  margin-top: 0;
   padding-top: 163px;
 }
 
@@ -1537,12 +1539,12 @@ button,
 
 .site-form input,
 .site-form textarea {
-  margin-bottom: 40px;
+  margin-bottom: 19px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 14px 16px;
   border: 1px solid transparent;
-  background: #19baff;
+  background: rgba(4, 20, 39, 0.15);
   font-size: 16px;
   line-height: 22px;
   font-family: "PTMono-Regular", "Arial", "sans-serif";
@@ -1586,7 +1588,7 @@ button,
 }
 
 .site-form input {
-  width: 47.4%;
+  width: 100%;
 }
 
 .site-form textarea {
@@ -1631,6 +1633,7 @@ button,
 .site-form button[type=submit] {
   margin-right: 70px;
   min-width: 270px;
+  background-color: #041827;
 }
 
 .site-form__agreement {
@@ -1650,6 +1653,12 @@ button,
 
 .hide_after:after {
   display: none;
+}
+
+@media (min-width: 768px) {
+  .benefits__list {
+    padding-left: 20px;
+  }
 }
 
 @media (min-width: 1025px) {
@@ -1845,7 +1854,8 @@ button,
   }
 
   .page-header {
-    background: url("../../img/background/header-bg-tablet.png") center, url("../../img/background/header-bg-desktop.png") no-repeat top right, #041827;
+    background: url("../img/background/header-bg-tablet.png") center, url("../img/background/header-bg-desktop.png") no-repeat top right, #041827;
+    width: 100%;
   }
 
   .page-header__container {
@@ -1884,6 +1894,7 @@ button,
     font-size: 60px;
     line-height: 70px;
     max-width: 470px;
+    margin-top: 0;
   }
 
   .page-header__description {
@@ -2040,6 +2051,10 @@ button,
     margin-bottom: 41px;
   }
 
+  .about-company__text-detalied {
+    padding-bottom: 22px;
+  }
+
   .about-company__button {
     margin: -12px 0 0 3px;
   }
@@ -2133,11 +2148,11 @@ button,
 
   .page-header {
     background: url("../../img/background/header-bg-mobile.png") center, url("../img/intro-background-mobile.png") no-repeat top center, #041827;
+    width: 100%;
   }
 
   .page-header__background {
-    max-width: 768px;
-    padding: 10px 33px 20px 33px;
+    padding: 20px 33px 20px 33px;
   }
 
   .page-header__container {
@@ -2207,7 +2222,9 @@ button,
   }
 
   .page-footer__sections {
+    padding-top: 16px;
     margin-bottom: 27px;
+    border-top: 1px solid white;
   }
 
   .page-footer__contacts {

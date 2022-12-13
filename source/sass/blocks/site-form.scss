@@ -30,11 +30,11 @@
   
   .site-form input,
   .site-form textarea {
-    margin-bottom: 40px;
+    margin-bottom: 19px;
     box-sizing: border-box;
     padding: 14px 16px;
     border: 1px solid transparent;
-    background: #19baff;
+    background: rgba(4, 20, 39, 0.15);
     font-size: 16px;
     line-height: 22px;
     font-family: $PTMono-Regular;
@@ -63,7 +63,7 @@
   }
   
   .site-form input {
-    width: 47.4%;
+    width: 100%;
   
     @media (max-width: $vp-375) {
       width: 100%;
@@ -117,7 +117,7 @@
   .site-form button[type="submit"] {
     margin-right: 70px;
     min-width: 270px;
-  
+    background-color: $background-color-main;
     @media (max-width: $vp-1024) {
       margin-right: 73px;
       min-width: 280px;
