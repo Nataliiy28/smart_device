@@ -1262,6 +1262,9 @@ button,
   position: fixed;
   left: 0;
   top: 0;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  padding: 30px 0px 35px 0px;
 }
 
 .page-header__container {
