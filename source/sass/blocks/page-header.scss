@@ -17,6 +17,13 @@
       $font-black;
     width: 100%;
   }
+
+  @media (max-width: $vp-375) {
+    background: url("../../img/background/header-bg-mobile.png") center,
+      url("../img/intro-background-mobile.png") no-repeat top center,
+      $font-black;
+    width: 100%;
+  }
 }
 
 .page-header__background {
@@ -36,12 +43,27 @@
 }
 
 .page-header__intro {
+  @media (max-whidth:$vp-1280) {
+    padding-left: 200px;
+  }
+
+  @media (max-whidth: $vp-1024) {
+    padding-left: 200px;
+  }
 
   @media (max-whidth: $vp-768) {
-    padding-left: 0;
+    padding-left: 200px;
     position: absolute;
     left: 44px;
     top: -145px;
+  }
+
+  @media (max-whidth: $vp-320) {
+    padding-left: 0;
+  }
+
+  @media (max-whidth:$vp-375) {
+    padding-left: 0;
   }
 }
 
@@ -119,6 +141,7 @@
   color: rgba(255, 255, 255, 1);
   font-family: $PTMono-Regular;
   transition: 0.3s;
+  display: inline-block;
 
   &:hover,
   &:focus {
@@ -177,7 +200,7 @@
   }
 }
 
-.page-header__button-call {
+.page-header__link-call {
   margin-left: 48px;
 }
 
@@ -200,13 +223,20 @@
     margin-top: 0;
   }
 
+  @media (min-width: $vp-768) {
+    margin-left: 32px;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 75px;
+  }
+
   @media (max-width: $vp-375) {
-    // margin: 212px 0 0;
     margin-left: 32px;
     font-size: 40px;
     line-height: 47px;
     max-width: 100%;
   }
+
 }
 
 .page-header__description {
@@ -220,7 +250,7 @@
 
 
   @media (max-width: $vp-1024) {
-    margin: 28px 0 0 114px;
+    margin: 27px 0px 4px 71px;
     font-size: 18px;
     line-height: 28px;
     max-width: 356px;
@@ -241,7 +271,7 @@
   line-height: 19px;
 
   @media (max-width: $vp-1024) {
-    margin: 55px 0 0 114px;
+    margin: 55px 0px 0px 114px;
     padding: 17px 30px;
   }
 

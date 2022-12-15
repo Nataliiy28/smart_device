@@ -43,11 +43,6 @@ openPopupButtons.forEach((button) => { // Перебираем все кнопк
   })
 });
 
-// closePopupButton.addEventListener('click', () => { // Вешаем обработчик на крестик
-//   popupBg.classList.remove('active'); // Убираем активный класс с фона
-//   popup.classList.remove('active'); // И с окна
-// });
-
 document.querySelector('.page-header__button-consultation').addEventListener('click', function (e) {
   let popup = document.querySelector('.modal')
   popup.style.display = popup.style.display === 'none' ? 'block' : 'none'
@@ -57,48 +52,6 @@ document.querySelector('.modal__close').addEventListener('click', function (e) {
   let closePopupButton = document.querySelector('.modal')
   closePopupButton.style.display = closePopupButton.style.display === 'none' ? 'block' : 'none'
 });
-//-------------------------
-
-//--------------------------не открывает модальное окно 
-// function openPopup() {
-//   PopupModal.classList.add('modal--show');
-//   Overly.classList.add('overlay--show');
-//   UsserName.focus();
-//   BODY_ELEMENT.classList.add('noscroll');
-// }
-
-// function closePopup() {
-//   if (POPUP_ELEMENT.classList.contains('modal--show')) {
-//     PopupModal.classList.remove('modal--show');
-//     Overly.classList.remove('overlay--show');
-//     BODY_ELEMENT.classList.remove('noscroll');
-//   }
-// }
-
-// CallbackButtonConsalt.addEventListener('click', function (evt) {
-//   evt.preventDefault();
-//   openPopup();
-// });
-
-// CloseElement.addEventListener('click', function () {
-//   closePopup();
-// });
-
-// CloseElement.addEventListener('keydown', function (evt) {
-//   if (evt.keyCode === KeyEnter) {
-//     closePopup();
-//   }
-// });
-
-// window.addEventListener('keydown', function (evt) {
-//   if (evt.keyCode === KeyEsc) {
-//     closePopup();
-//   }
-// });
-
-// Overly.addEventListener('click', function () {
-//   closePopup();
-// });
 
 //-----------------------------------
 
