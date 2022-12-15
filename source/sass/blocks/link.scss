@@ -17,13 +17,14 @@
     cursor: pointer;
     background: transparent;
     transition: 0.3s;
+}
 
-    .link--light {
-        border-color: $basic-grey;
+.link--light {
+    border-color: $basic-grey;
 
-        &:hover,
-        &:focus {
-            background: $basic-blue;
-            border-color: $basic-blue;
-        }
+    &:hover,
+    &:focus {
+        background: $basic-blue;
+        border-color: $basic-blue;
     }
+}

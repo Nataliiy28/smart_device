@@ -43,6 +43,11 @@
 }
 
 .page-header__intro {
+
+  @media (max-whidth: $vp-1440) {
+    padding-left: 210px;
+  }
+
   @media (max-whidth:$vp-1280) {
     padding-left: 200px;
   }
@@ -150,6 +155,7 @@
 
   &--phone {
     margin-left: 122px;
+    margin-right: 145px;
 
     &::before {
       position: absolute;
@@ -214,7 +220,8 @@
   color: $background-color-whte;
   margin-top: 0;
   padding-top: 163px;
-
+  margin-left: 0px;
+  
   @media (max-width: $vp-1024) {
     margin: 93px 0 0 63px;
     font-size: 60px;

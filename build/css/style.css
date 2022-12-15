@@ -1315,6 +1315,7 @@ button,
 
 .page-header__link--phone {
   margin-left: 122px;
+  margin-right: 145px;
 }
 
 .page-header__link--phone::before {
@@ -1354,6 +1355,7 @@ button,
   color: #F8FDFF;
   margin-top: 0;
   padding-top: 163px;
+  margin-left: 0px;
 }
 
 .page-header__description {
@@ -1648,6 +1650,39 @@ button,
 
 .hide_after:after {
   display: none;
+}
+
+.link {
+  margin: 0;
+  padding: 14px 28px;
+  display: inline-block;
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: top;
+  text-decoration: none;
+  font-family: "RobotoCondensed-Bold", "Arial", "sans-serif";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: #F2F5F6;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  background: transparent;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.link--light {
+  border-color: #F2F5F6;
+}
+
+.link--light:hover,
+.link--light:focus {
+  background: #00B2FF;
+  border-color: #00B2FF;
 }
 
 @media (min-width: 768px) {
@@ -2410,6 +2445,12 @@ button,
 @media (min-width: 1270px) and (max-width: 1480px) {
   .page-footer__contacts {
     width: 40%;
+  }
+}
+
+@media (max-whidth: 1440px) {
+  .page-header__intro {
+    padding-left: 210px;
   }
 }
 
