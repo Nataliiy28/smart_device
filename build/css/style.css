@@ -784,16 +784,6 @@ button,
   transition: 0.3s;
 }
 
-.button--light {
-  border-color: #F2F5F6;
-}
-
-.button--light:hover,
-.button--light:focus {
-  background: #00B2FF;
-  border-color: #00B2FF;
-}
-
 .button--accent {
   background: #00B2FF;
 }
@@ -814,13 +804,13 @@ button,
   opacity: 0.7;
 }
 
-.button--light-accent {
+.link--light-accent {
   border-color: #00B2FF;
   color: #00B2FF;
 }
 
-.button--light-accent:hover,
-.button--light-accent:focus {
+.link--light-accent:hover,
+.link--light-accent:focus {
   color: #ffffff;
   background: #00B2FF;
 }
