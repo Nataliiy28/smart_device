@@ -1241,7 +1241,7 @@ button,
 
 .page-header {
   background: #041827 url("../img/background/header-bg-desktop.png") no-repeat center;
-  width: 100%;
+  background-size: cover;
 }
 
 .page-header__background {
@@ -1283,8 +1283,9 @@ button,
 }
 
 .page-header__logo-img {
-  width: 202px;
-  height: 52px;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .page-header__contacts {
@@ -1694,12 +1695,6 @@ button,
   .benefits__list {
     padding-left: 20px;
   }
-
-  .page-header__title {
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 75px;
-  }
 }
 
 @media (min-width: 1025px) {
@@ -1892,11 +1887,6 @@ button,
 
   .page-footer__rights {
     display: none;
-  }
-
-  .page-header {
-    background: url("../img/background/header-bg-tablet.png") center, url("../img/background/header-bg-desktop.png") no-repeat top right, #041827;
-    width: 100%;
   }
 
   .page-header__container {
@@ -2119,15 +2109,15 @@ button,
   .accordion__toggle::before {
     width: 16px;
     height: 1px;
-    top: 7px;
-    right: 2px;
+    top: 32px;
+    right: 15px;
   }
 
   .accordion__toggle::after {
     width: 1px;
     height: 16px;
-    top: 0;
-    right: 9.5px;
+    top: 25px;
+    right: 23px;
     opacity: 1;
   }
 
@@ -2187,11 +2177,6 @@ button,
     margin-bottom: 26px;
   }
 
-  .page-header {
-    background: url("../../img/background/header-bg-mobile.png") center, url("../img/intro-background-mobile.png") no-repeat top center, #041827;
-    width: 100%;
-  }
-
   .page-header__background {
     padding: 20px 33px 20px 33px;
   }
@@ -2210,6 +2195,13 @@ button,
     padding-right: 80px;
     padding-bottom: 20px;
     padding-left: 55px;
+  }
+
+  .page-header__title {
+    margin-left: 32px;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 75px;
   }
 }
 
@@ -2252,6 +2244,13 @@ button,
     margin-top: 6px;
   }
 
+  .page-footer__title {
+    border-top: 1px solid #ffffff;
+    padding-top: 31px;
+    margin-top: -13px;
+    margin-right: 17px;
+  }
+
   .page-footer__links-and-contacts {
     padding-top: 51px;
     -webkit-box-orient: vertical;
@@ -2265,7 +2264,6 @@ button,
   .page-footer__sections {
     padding-top: 16px;
     margin-bottom: 27px;
-    border-top: 1px solid white;
   }
 
   .page-footer__contacts {
@@ -2310,11 +2308,6 @@ button,
     margin: 21px 0 0;
   }
 
-  .page-header {
-    background: url("../../img/background/header-bg-mobile.png") center, url("../img/intro-background-mobile.png") no-repeat top center, #041827;
-    width: 100%;
-  }
-
   .page-header__top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2343,7 +2336,7 @@ button,
   }
 
   .page-header__description {
-    margin: 27px 0 0 25px;
+    margin: 22px 3px 0px 30px;
     font-size: 16px;
     line-height: 25px;
     max-width: 100%;
@@ -2351,7 +2344,7 @@ button,
 
   .page-header__button-consultation {
     margin: 50px 0px 10px 25px;
-    padding: 17px 10px 17px 10px;
+    padding: 12px 10px 12px 10px;
   }
 
   .product {

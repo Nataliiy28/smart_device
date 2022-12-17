@@ -55,7 +55,7 @@ document.querySelector('.modal__close').addEventListener('click', function (e) {
 
 //-----------------------------------
 
-//-----------------------------------кнопка подробнее
+//-----------------------------------меняет текст при открытии кнопки подробнее
 
 const button = document.querySelector('.about-company__button');
 const youdiv = document.querySelector('.about-company__text-detalied');
@@ -70,7 +70,7 @@ button.addEventListener('click', function () {
 
 const PlusButtonElement = document.querySelectorAll('.page-footer__title');
 PlusButtonElement.forEach(element => element.addEventListener('click', function () {
-  // PlusButtonElement.classList.add('hide-after');
+
   if (element.classList.contains('hide_after')) {
     element.classList.remove('hide_after');
   } else {
@@ -78,8 +78,26 @@ PlusButtonElement.forEach(element => element.addEventListener('click', function 
   }
 }));
 
-//-------------------------------------
+//-------------------------------------убирает аккордион +-
+// const classList = document.querySelectorAll(".page-footer__title")
 
+// window.addEventListener("resize", function () {
+
+//   if (window.innerWidth < 700) {
+//     classList.forEach(item => {
+//       item.classList.remove("hide_after")
+//     })
+//   }
+
+//   else {
+//     console.log('more')
+//     classList.forEach(item => {
+//       item.classList.add("")
+//     })
+//   }
+// });
+
+//-------------------------------------
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils

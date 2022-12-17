@@ -27,28 +27,30 @@
 
 <body>
   <header class="page-header">
-    <div class="page-header__background">
-      <div class="page-header__top container">
-        <a class="page-header__logo" href="./index.html">
-          <picture>
-            <!-- <source type="image/webp" media="(min-width: 1200px)"
+    <div class="container">
+      <div class="page-header__background">
+        <div class="page-header__top container">
+          <a class="page-header__logo" href="./index.html">
+            <picture>
+              <!-- <source type="image/webp" media="(min-width: 1200px)"
               srcset="./img/svg/header/logo-brain-desktop.webp 1x, ./img/svg/header/logo-brain-desktop@2x.webp 2x">
             <source type="image/webp" media="(min-width: 768px)"
               srcset="./img/svg/header/logo-brain-tablet.webp 1x, ./img/svg/header/logo-brain-tablet@2x.webp 2x">
             <source type="image/webp"
               srcset="./img/svg/header/logo-brain-mobile.webp 1x, ./img/svg/header/logo-brain-mobile@2x.webp 2x"> -->
-            <source media="(min-width:1200px)" srcset="./img/svg/header/logo-brain-desktop.svg">
-            <img class="page-header__logo-img" src="./img/svg/header/logo-brain-mobile.svg" width="35" height="35"
-              alt="Логотип Smart Device">
-          </picture>
-        </a>
-        <div class="page-header__contacts">
-          <a class="page-header__link page-header__link--email" href="mailto:info@sd.ru"><span
-              class="page-header__tablet-hidden">info@sd.ru</span></a>
-          <a class="page-header__link page-header__link--phone" href="tel:+74950005252"><span
-              class="page-header__tablet-hidden">+7 (495) 000 52 52</span></a>
-          <a class="link link--light page-header__link-call page-header__tablet-hidden">Заказать
-            звонок</a>
+              <source media="(min-width:1200px)" srcset="./img/svg/header/logo-brain-desktop.svg">
+              <img class="page-header__logo-img" src="./img/svg/header/logo-brain-mobile.svg" width="35" height="35"
+                alt="Логотип Smart Device">
+            </picture>
+          </a>
+          <div class="page-header__contacts">
+            <a class="page-header__link page-header__link--email" href="mailto:info@sd.ru"><span
+                class="page-header__tablet-hidden">info@sd.ru</span></a>
+            <a class="page-header__link page-header__link--phone" href="tel:+74950005252"><span
+                class="page-header__tablet-hidden">+7 (495) 000 52 52</span></a>
+            <a class="link link--light page-header__link-call page-header__tablet-hidden">Заказать
+              звонок</a>
+          </div>
         </div>
       </div>
     </div>
@@ -285,9 +287,9 @@
       </div>
       <div class="page-footer__links-and-contacts">
         <div data-accordion="1" class="page-footer__sections accordion page-footer__sections-wrapper">
-          <details class="">
+          <!-- аккордион-1 -->
+          <details>
             <summary class="page-footer__title accordion__toggle">Разделы сайта</summary>
-
             <p class="page-footer__section-item">
               <a class="page-footer__link" href="#">О компании</a>
             </p>
@@ -309,17 +311,13 @@
             <p class="page-footer__section-item">
               <a class="page-footer__link" href="#">Контакты</a>
             </p>
-
           </details>
-
           <div data-accordion="2"
             class="page-footer__sections page-footer__accordion-wrapper accordion page-footer__address-wrapper">
-            <details class="">
-              <summary class="page-footer__title accordion__toggle">Наш офис</summary>
-
-              <!-- <div class="page-footer__address-wrapper page-footer__accordion-wrapper accordion__content"> -->
+         <!-- аккордион-2 -->
+            <details>
+              <summary id="toggleAccordion" class="page-footer__title accordion__toggle">Наш офис</summary>
               <p class="page-footer__address">г. Мытищи, Олимпийский проспект, д.10</p>
-              <!-- <ul class="page-footer__phones-list"> -->
               <p class="page-footer__phone-item">
                 <a class="page-footer__link page-footer__phone-number" href="tel:+74955894050">+7 (495) 589-40-50</a>
               </p>
@@ -329,59 +327,9 @@
               <p class="page-footer__phone-item">
                 <a class="page-footer__link page-footer__phone-number" href="tel:+792692608079">+7 (926) 926-080-79</a>
               </p>
-              <!-- </ul> -->
-              <!-- </div> -->
             </details>
           </div>
         </div>
-
-        <!-- <div class="page-footer__sections accordion"> -->
-        <!-- <span class="page-footer__title accordion__toggle">Разделы сайта</span>
-          <div class="page-footer__sections-wrapper page-footer__accordion-wrapper accordion__content">
-            <ul class="page-footer__sections-list">
-              <li class="page-footer__section-item">
-                <a class="page-footer__link" href="#">О компании</a>
-              </li>
-              <li class="page-footer__section-item">
-                <a class="page-footer__link" href="#">Продукты</a>
-              </li>
-              <li class="page-footer__section-item">
-                <a class="page-footer__link" href="#">Производство печатных плат</a>
-              </li>
-              <li class="page-footer__section-item">
-                <a class="page-footer__link" href="#">Монтаж печатных плат</a>
-              </li>
-            </ul>
-            <ul class="page-footer__sections-list">
-              <li class="page-footer__section-item">
-                <a class="page-footer__link" href="#">Комплектующие</a>
-              </li>
-              <li class="page-footer__section-item">
-                <a class="page-footer__link" href="#">Доставка</a>
-              </li>
-              <li class="page-footer__section-item">
-                <a class="page-footer__link" href="#">Контакты</a>
-              </li>
-            </ul>
-          </div>
-        </div> -->
-        <!-- <div class="page-footer__contacts accordion">
-          <span class="page-footer__title accordion__toggle">Наш офис</span>
-          <div class="page-footer__address-wrapper page-footer__accordion-wrapper accordion__content">
-            <span class="page-footer__address">г. Мытищи, Олимпийский проспект, д.10</span>
-            <ul class="page-footer__phones-list">
-              <li class="page-footer__phone-item">
-                <a class="page-footer__link page-footer__phone-number" href="tel:+74955894050">+7 (495) 589-40-50</a>
-              </li>
-              <li class="page-footer__phone-item">
-                <a class="page-footer__link page-footer__phone-number" href="tel:+79250038767">+7 (925) 003-87-67</a>
-              </li>
-              <li class="page-footer__phone-item">
-                <a class="page-footer__link page-footer__phone-number" href="tel:+792692608079">+7 (926) 926-080-79</a>
-              </li>
-            </ul>
-          </div>
-        </div> -->
       </div>
     </div>
     <div class="page-footer__bottom">

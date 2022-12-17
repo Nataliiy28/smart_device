@@ -1,29 +1,6 @@
 .page-header {
   background: $font-black url("../img/background/header-bg-desktop.png") no-repeat center;
- 
-  width: 100%;
   background-size: cover;
-
-  // @media (max-width: $vp-1024) {
-  //   background: url("../img/background/header-bg-tablet.png") center,
-  //     url("../img/background/header-bg-desktop.png") no-repeat top right,
-  //     $font-black;
-  //   width: 100%;
-  // }
-
-  // @media (max-width: $vp-768) {
-  //   background: url("../../img/background/header-bg-mobile.png") center,
-  //     url("../img/intro-background-mobile.png") no-repeat top center,
-  //     $font-black;
-  //   width: 100%;
-  // }
-
-  // @media (max-width: $vp-375) {
-  //   background: url("../../img/background/header-bg-mobile.png") center,
-  //     url("../img/intro-background-mobile.png") no-repeat top center,
-  //     $font-black;
-  //   width: 100%;
-  // }
 }
 
 .page-header__background {
@@ -236,10 +213,10 @@
     margin-top: 0;
   }
 
-  @media (min-width: $vp-768) {
-    // margin-left: 32px;
+  @media (max-width: $vp-768) {
+    margin-left: 32px;
     font-weight: 700;
-    font-size: 64px;
+    font-size: 50px;
     line-height: 75px;
   }
 
@@ -270,7 +247,7 @@
   }
 
   @media (max-width: $vp-375) {
-    margin: 27px 0 0 25px;
+    margin: 22px 3px 0px 30px;
     font-size: 16px;
     line-height: 25px;
     max-width: 100%;
@@ -290,7 +267,7 @@
 
   @media (max-width: $vp-375) {
     margin: 50px 0px 10px 25px;
-    padding: 17px 10px 17px 10px;
+    padding: 12px 10px 12px 10px;
   }
 }
 

@@ -15,30 +15,17 @@
 
     // кнопка + -
     &::before {
-      // @media (max-width: $vp-1024) {
-      //   display: none;
-      // }
-
       width: 16px;
       height: 1px;
-      top: 7px;
-      right: 2px;
+      top: 32px;
+      right: 15px;
     }
 
     &::after {
-      // @media (max-width: $vp-1024) {
-      //   display: none;
-      // }
-
-      // @media (max-width: $vp-768) {
-      //   display: none;
-      // }
-
-      // @media (min-width: $vp-768) and (max-width: $vp-375) {
       width: 1px;
       height: 16px;
-      top: 0;
-      right: 9.5px;
+      top: 25px;
+      right: 23px;
       opacity: 1;
     }
 

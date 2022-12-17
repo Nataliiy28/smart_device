@@ -150,6 +150,15 @@
   letter-spacing: 0.05em;
   color: $color-default-white;
   text-transform: uppercase;
+
+
+
+  @media (max-width: $vp-375) {
+    border-top: 1px solid $color-default-white;
+    padding-top: 31px;
+    margin-top: -13px;
+    margin-right: 17px;
+  }
 }
 
 .page-footer__links-and-contacts {
@@ -183,7 +192,7 @@
   @media (max-width: $vp-375) {
     padding-top: 16px;
     margin-bottom: 27px;
-    border-top: 1px solid white;
+    // border-top: 1px solid white;
   }
 }
 
