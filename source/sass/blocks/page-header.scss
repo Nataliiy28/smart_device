@@ -1,29 +1,29 @@
 .page-header {
   background: $font-black url("../img/background/header-bg-desktop.png") no-repeat center;
-  // margin-top: -93px;
-  // background-size: 100%;
+ 
   width: 100%;
+  background-size: cover;
 
-  @media (max-width: $vp-1024) {
-    background: url("../img/background/header-bg-tablet.png") center,
-      url("../img/background/header-bg-desktop.png") no-repeat top right,
-      $font-black;
-    width: 100%;
-  }
+  // @media (max-width: $vp-1024) {
+  //   background: url("../img/background/header-bg-tablet.png") center,
+  //     url("../img/background/header-bg-desktop.png") no-repeat top right,
+  //     $font-black;
+  //   width: 100%;
+  // }
 
-  @media (max-width: $vp-768) {
-    background: url("../../img/background/header-bg-mobile.png") center,
-      url("../img/intro-background-mobile.png") no-repeat top center,
-      $font-black;
-    width: 100%;
-  }
+  // @media (max-width: $vp-768) {
+  //   background: url("../../img/background/header-bg-mobile.png") center,
+  //     url("../img/intro-background-mobile.png") no-repeat top center,
+  //     $font-black;
+  //   width: 100%;
+  // }
 
-  @media (max-width: $vp-375) {
-    background: url("../../img/background/header-bg-mobile.png") center,
-      url("../img/intro-background-mobile.png") no-repeat top center,
-      $font-black;
-    width: 100%;
-  }
+  // @media (max-width: $vp-375) {
+  //   background: url("../../img/background/header-bg-mobile.png") center,
+  //     url("../img/intro-background-mobile.png") no-repeat top center,
+  //     $font-black;
+  //   width: 100%;
+  // }
 }
 
 .page-header__background {
@@ -114,13 +114,14 @@
   }
 }
 
-.page-header__logo{
+.page-header__logo {
   display: block;
 }
 
 .page-header__logo-img {
-  width: 202px;
-  height: 52px;
+  display: block;
+  width: 100%;
+  height: 100%;
 
   @media (max-width: $vp-375) {
     width: 38px;
