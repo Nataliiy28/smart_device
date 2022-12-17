@@ -1255,6 +1255,7 @@ button,
   padding-top: 30px;
   padding-bottom: 35px;
   padding: 30px 0px 35px 0px;
+  z-index: 1;
 }
 
 .page-header__container {
@@ -1275,6 +1276,10 @@ button,
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+}
+
+.page-header__logo {
+  display: block;
 }
 
 .page-header__logo-img {
@@ -1691,7 +1696,6 @@ button,
   }
 
   .page-header__title {
-    margin-left: 32px;
     font-weight: 700;
     font-size: 64px;
     line-height: 75px;
@@ -2450,25 +2454,25 @@ button,
 
 @media (max-whidth: 1440px) {
   .page-header__intro {
-    padding-left: 210px;
+    margin-left: 210px;
   }
 }
 
 @media (max-whidth: 1280px) {
   .page-header__intro {
-    padding-left: 200px;
+    margin-left: 200px;
   }
 }
 
 @media (max-whidth: 1024px) {
   .page-header__intro {
-    padding-left: 200px;
+    margin-left: 200px;
   }
 }
 
 @media (max-whidth: 768px) {
   .page-header__intro {
-    padding-left: 200px;
+    padding-left: 100px;
     position: absolute;
     left: 44px;
     top: -145px;
