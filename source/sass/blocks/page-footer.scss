@@ -262,6 +262,7 @@
 .page-footer__address-wrapper {
   @media (max-width: $vp-375) {
     margin-bottom: 26px;
+    // border-bottom: 1px solid $color-default-white;
   }
 }
 

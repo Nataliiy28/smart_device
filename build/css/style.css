@@ -2197,6 +2197,14 @@ button,
     padding-left: 55px;
   }
 
+  .page-header__link--phone {
+    left: 144px;
+  }
+
+  .page-header__link--email {
+    left: 144px;
+  }
+
   .page-header__title {
     margin-left: 32px;
     font-weight: 700;
@@ -2447,7 +2455,7 @@ button,
 
 @media (max-whidth: 1440px) {
   .page-header__intro {
-    margin-left: 210px;
+    padding-left: 270px;
   }
 }
 

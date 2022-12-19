@@ -21,9 +21,8 @@
 }
 
 .page-header__intro {
-
   @media (max-whidth: $vp-1440) {
-    margin-left: 210px;
+    padding-left: 270px;
   }
 
   @media (max-whidth:$vp-1280) {
@@ -162,6 +161,10 @@
       }
     }
 
+    @media (max-width: $vp-768) {
+      left: 144px;
+    }
+
     @media (max-width: $vp-375) {
       margin-left: 34px;
     }
@@ -185,6 +188,10 @@
         height: 19px;
         background-size: 26px 19px;
       }
+    }
+
+    @media (max-width: $vp-768) {
+      left: 144px;
     }
   }
 }
