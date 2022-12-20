@@ -346,9 +346,9 @@
   align-self: center;
   text-transform: uppercase;
 
-  @media (min-width: $vp-1024 + 1) {
-    @include visually-hidden;
-  }
+  // @media (min-width: $vp-1024 + 1) {
+  //   @include visually-hidden;
+  // }
 
   @media (max-width: $vp-375) {
     margin: 26px 0 0;

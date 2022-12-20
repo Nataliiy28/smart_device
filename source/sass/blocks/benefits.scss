@@ -1,10 +1,5 @@
 .benefits {
   padding: 112px 0;
-  font-family: $PTMono-Regular;
-  font-size: 16px;
-  line-height: 22px;
-  color: $color-default-black;
-  background: #ffffff url("") no-repeat center;
 
   @media (max-width: $vp-1024) {
     padding: 59px 0 82px;
@@ -34,7 +29,7 @@
   min-height: 299px;
   border: 1px solid #ebebeb;
   border-left: 3px solid $basic-blue;
-  background-color: #ffffff;
+  background-color: $color-default-white;
   transition: 0.3s;
 
   &:nth-last-child(-n+2) {

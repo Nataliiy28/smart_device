@@ -9,7 +9,11 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  gap: 26px;
+  gap: 14px;
+
+  @media (max-width:$vp-768) {
+    gap: 3px;
+  }
 
   @media (max-width: $vp-375) {
     flex-direction: column;
@@ -120,7 +124,8 @@
   margin-right: 70px;
   min-width: 270px;
   background-color: $background-color-main;
-
+  margin-bottom: 20px;
+  
   @media (max-width: $vp-1024) {
     margin-right: 73px;
     min-width: 280px;
