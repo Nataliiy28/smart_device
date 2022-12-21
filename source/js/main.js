@@ -1,7 +1,7 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
 import './modules/modals/button-hidden';
-
+import './modules/modals/phone-mask';
 'use strict';
 
 const ButtonConsalt = document.querySelector('.page-header__button-consultation');
