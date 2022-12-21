@@ -1,6 +1,6 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
-
+import './modules/modals/button-hidden';
 
 'use strict';
 
@@ -57,12 +57,12 @@ document.querySelector('.modal__close').addEventListener('click', function (e) {
 
 //-----------------------------------меняет текст при открытии кнопки подробнее
 
-const button = document.querySelector('.about-company__button');
-const youdiv = document.querySelector('.about-company__text-detalied');
-button.addEventListener('click', function () {
-  youdiv.style.display = youdiv.style.display === 'none' ? 'block' : 'none';
-  button.innerHTML = (button.innerHTML === 'Подробнее') ? button.innerHTML = 'Скрыть всё' : button.innerHTML = 'Подробнее';
-});
+// const button = document.querySelector('.about-company__button');
+// const youdiv = document.querySelector('.about-company__text-detalied');
+// button.addEventListener('click', function () {
+//   youdiv.style.display = youdiv.style.display === 'none' ? 'block' : 'none';
+//   button.innerHTML = (button.innerHTML === 'Подробнее') ? button.innerHTML = 'Скрыть всё' : button.innerHTML = 'Подробнее';
+// // });
 
 // ---------------------------------
 

@@ -673,7 +673,12 @@ button,
 }
 
 .about-company__text-detalied {
+  display: none;
   margin-bottom: 21px;
+}
+
+.about-company__text-detalied--active {
+  display: block;
 }
 
 .about-company__button {
