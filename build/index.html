@@ -236,7 +236,7 @@
                 <label class="visually-hidden" for="name">Введите ваше имя</label>
                 <input id="name" name="name" type="text" placeholder="Имя">
                 <label class="visually-hidden" for="phone">Введите ваш номер телефона</label>
-                <input id="phone" name="phone" type="tel" placeholder="Телефон">
+                <input id="phone" name="phone" type="tel" pattern="\+7(\s+)\([0-9]){3}\)(\s+)[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"required placeholder="Телефон">
                 <label class="visually-hidden" for="text">Введите ваш номер телефона</label>
               </div>
               <textarea id="text" name="question-text" placeholder="Ваш вопрос"></textarea>
