@@ -25,7 +25,7 @@ const storageText = '';
 const storageQuestion = '';
 
 //------------------------Меняет текст на кнопке => бесплатная консультация => получить бесплатную консультацию
-if (ButtonConsalt && screen.width < MobileWidth) {
+if (screen.width < MobileWidth) {
   ButtonConsalt.textContent = ButtonText;
 }
 
@@ -67,16 +67,18 @@ document.querySelector('.modal__close').addEventListener('click', function (e) {
 // ---------------------------------
 
 //----------------------------------кнопка аккордиона +-
+if (screen.width < 768) {
+  const PlusButtonElement = document.querySelectorAll('.page-footer__title');
+  PlusButtonElement.forEach(element => element.addEventListener('click', function () {
 
-const PlusButtonElement = document.querySelectorAll('.page-footer__title');
-PlusButtonElement.forEach(element => element.addEventListener('click', function () {
+    if (element.classList.contains('hide_after')) {
+      element.classList.remove('hide_after');
+    } else {
+      element.classList.add('hide_after');
+    }
+  }));
+}
 
-  if (element.classList.contains('hide_after')) {
-    element.classList.remove('hide_after');
-  } else {
-    element.classList.add('hide_after');
-  }
-}));
 
 //-------------------------------------убирает аккордион +-
 // const classList = document.querySelectorAll(".page-footer__title")
