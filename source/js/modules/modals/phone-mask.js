@@ -32,6 +32,5 @@ window.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("keydown", mask, false)
 
   });
-
 });
-
+//-----делает ввод телефона по шаблону +7 (---)***-**-**
