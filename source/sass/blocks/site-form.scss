@@ -1,144 +1,151 @@
 .site-form {
-    font-family: $PTMono-Regular;
-    color: $background-color-whte;
-    font-size: 16px;
-    line-height: 22px;
+  font-family: $PTMono-Regular;
+  color: $background-color-whte;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.site-form__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+
+  @media (max-width:$vp-768) {
+    gap: 3px;
   }
-  
-  .site-form__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  
-    @media (max-width: $vp-375) {
-      flex-direction: column;
+
+  @media (max-width: $vp-375) {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  &--submit {
+    @media (max-width: $vp-1024) {
       justify-content: flex-start;
     }
-  
-    &--submit {
-      @media (max-width: $vp-1024) {
-        justify-content: flex-start;
-      }
-    }
   }
-  
-  .site-form input,
-  .site-form textarea,
-  .site-form select {
-    appearance: none;
+}
+
+.site-form input,
+.site-form textarea,
+.site-form select {
+  appearance: none;
+}
+
+.site-form input,
+.site-form textarea {
+  margin-bottom: 19px;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid transparent;
+  background: rgba(4, 20, 39, 0.15);
+  font-size: 16px;
+  line-height: 22px;
+  font-family: $PTMono-Regular;
+  color: $background-color-whte;
+  transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    border: 1px solid #ffffff;
   }
-  
-  .site-form input,
-  .site-form textarea {
-    margin-bottom: 40px;
-    box-sizing: border-box;
-    padding: 14px 16px;
-    border: 1px solid transparent;
-    background: #19baff;
-    font-size: 16px;
-    line-height: 22px;
-    font-family: $PTMono-Regular;
-    color: $background-color-whte;
-    transition: 0.3s;
-  
-    &:hover,
-    &:focus {
-      outline: none;
-      border: 1px solid #ffffff;
-    }
-  
-    @media (max-width: $vp-1024) {
-      padding: 15px 18px;
-    }
-  
-    @media (max-width: $vp-375) {
-      margin-bottom: 31px;
-      padding: 13px 18px 16px 17px;
-    }
+
+  @media (max-width: $vp-1024) {
+    padding: 15px 18px;
   }
-  
-  .site-form input::placeholder,
-  .site-form textarea::placeholder {
-    color: $background-color-whte;
+
+  @media (max-width: $vp-375) {
+    margin-bottom: 31px;
+    padding: 13px 18px 16px 17px;
   }
-  
-  .site-form input {
-    width: 47.4%;
-  
-    @media (max-width: $vp-375) {
-      width: 100%;
-    }
-  }
-  
-  .site-form textarea {
+}
+
+.site-form input::placeholder,
+.site-form textarea::placeholder {
+  color: $background-color-whte;
+}
+
+.site-form input {
+  width: 100%;
+
+  @media (max-width: $vp-375) {
     width: 100%;
-    min-height: 154px;
-    resize: none;
-  
-    @media (max-width: $vp-1024) {
-      min-height: 161px;
-    }
-  
-    @media (max-width: $vp-375) {
-      margin-bottom: 24px;
-      min-height: 104px;
-    }
   }
-  
-  .site-form input[type="checkbox"] {
-    @include visually-hidden;
+}
+
+.site-form textarea {
+  width: 100%;
+  min-height: 154px;
+  resize: none;
+
+  @media (max-width: $vp-1024) {
+    min-height: 161px;
   }
-  
-  .site-form input[type="checkbox"] + label {
-    position: relative;
-    cursor: pointer;
-  
-    &::before {
-      position: absolute;
-      content: "";
-      width: 14px;
-      height: 14px;
-      top: 1px;
-      left: -32px;
-      border: 1px solid #ffffff;
-    }
-  
-    @media (max-width: $vp-375) {
-      margin-left: 34px;
-    }
+
+  @media (max-width: $vp-375) {
+    margin-bottom: 24px;
+    min-height: 104px;
   }
-  
-  .site-form input[type="checkbox"]:checked + label {
-    &::before {
-      background: url("../img/icons/checkbox-icon.svg") no-repeat center;
-    }
+}
+
+.site-form input[type="checkbox"] {
+  @include visually-hidden;
+}
+
+.site-form input[type="checkbox"]+label {
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    top: 1px;
+    left: -32px;
+    border: 1px solid #ffffff;
   }
-  
-  .site-form button[type="submit"] {
-    margin-right: 70px;
-    min-width: 270px;
-  
-    @media (max-width: $vp-1024) {
-      margin-right: 73px;
-      min-width: 280px;
-    }
-  
-    @media (max-width: $vp-375) {
-      margin-right: 0;
-      margin-bottom: 23px;
-      width: 100%;
-      min-width: 100%;
-    }
+
+  @media (max-width: $vp-375) {
+    margin-left: 34px;
   }
-  
-  .site-form__agreement {
-    font-size: 14px;
-    line-height: 16px;
-    color: rgba(255, 255, 255, 0.8);
-  
-    &:hover,
-    &:focus {
-      color: rgba(255, 255, 255, 1);
-    }
+}
+
+.site-form input[type="checkbox"]:checked+label {
+  &::before {
+    background: url("../img/icons/checkbox-icon.svg") no-repeat center;
   }
+}
+
+.site-form button[type="submit"] {
+  margin-right: 70px;
+  min-width: 270px;
+  background-color: $background-color-main;
+  margin-bottom: 20px;
   
+  @media (max-width: $vp-1024) {
+    margin-right: 73px;
+    min-width: 280px;
+  }
+
+  @media (max-width: $vp-375) {
+    margin-right: 0;
+    margin-bottom: 23px;
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+.site-form__agreement {
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(255, 255, 255, 0.8);
+
+  &:hover,
+  &:focus {
+    color: rgba(255, 255, 255, 1);
+  }
+}

@@ -1,8 +1,9 @@
 .modal-callback__title {
     @include page-title;
-    margin-bottom: 12px;
+    margin-bottom: 0px;
     font-size: 28px;
     line-height: 39px;
+    margin-top: 0;
   }
   
   .modal-callback__form-wrapper {
@@ -10,7 +11,7 @@
   }
   
   .modal-callback__text {
-    margin-bottom: 32px;
+    margin-bottom: 21px;
     max-width: 90%;
   }
   
