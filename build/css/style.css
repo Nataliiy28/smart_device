@@ -753,8 +753,13 @@ button,
   transition: 0.3s;
 }
 
+.benefits__icon path:hover,
+.benefits__icon path:focus {
+  fill: #F2F5F6;
+}
+
 .benefits__item:hover .benefits__icon path {
-  fill: #ffffff;
+  fill: #F2F5F6;
 }
 
 .benefits__content {

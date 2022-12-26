@@ -89,10 +89,15 @@
 .benefits__icon path {
   fill: $basic-blue;
   transition: 0.3s;
+
+  &:hover,
+  &:focus {
+    fill: $font-white;
+}
 }
 
 .benefits__item:hover .benefits__icon path {
-  fill: #ffffff;
+  fill: $font-white;
 }
 
 .benefits__content {
