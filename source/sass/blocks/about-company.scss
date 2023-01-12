@@ -79,7 +79,7 @@
   }
 
   @media (max-width: $vp-768) {
-    margin-bottom: 41px;
+    margin-bottom: 6px;
   }
 }
 
@@ -94,6 +94,7 @@
 
 .about-company__text-detalied--active {
   display: block;
+  padding-bottom: 50px;
 }
 
 .about-company__button {
