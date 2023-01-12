@@ -2446,6 +2446,12 @@ button,
   }
 }
 
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .page-header {
+    background-image: url("../img/background/header-bg-desktop@2x.png");
+  }
+}
+
 @media (max-whidth: 1440px) {
   .page-header__intro {
     padding-left: 270px;
