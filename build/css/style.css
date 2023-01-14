@@ -1326,8 +1326,9 @@ button,
 }
 
 .page-header__link--phone {
-  margin-left: 122px;
-  margin-right: 145px;
+  left: 9px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .page-header__link--email {
@@ -1881,10 +1882,11 @@ button,
     margin-left: 45px;
   }
 
-  .page-header__link--email::before {
-    width: 26px;
-    height: 19px;
-    background-size: 26px 19px;
+  .page-header__link--email {
+    width: 20px;
+    height: 20px;
+    top: -10px;
+    left: -38px;
   }
 
   .page-header__title {
@@ -2165,11 +2167,14 @@ button,
   }
 
   .page-header__link--phone {
-    left: 144px;
+    left: 43px;
   }
 
   .page-header__link--email {
-    left: 144px;
+    width: 20px;
+    height: 20px;
+    top: -2px;
+    left: 66px;
   }
 
   .page-header__title {

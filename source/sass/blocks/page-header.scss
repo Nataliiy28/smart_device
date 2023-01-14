@@ -140,33 +140,16 @@
   }
 
   &--phone {
-    margin-left: 122px;
-    margin-right: 145px;
-
-    // &::before {
-    //   position: absolute;
-    //   content: "";
-    //   width: 18px;
-    //   height: 18px;
-    //   top: -2px;
-    //   left: -34px;
-    //   background: url("../img/sprite/phone-header.svg") no-repeat center;
-    //   background-size: 18px 18px;
-    // }
+    left: 9px;
+    margin-left: 0px;
+    margin-right: 0px;
 
     @media (max-width: $vp-1024) {
       margin-left: 45px;
-
-      // &::before {
-      //   width: 24px;
-      //   height: 24px;
-      //   left: -24px;
-      //   background-size: 24px 24px;
-      // }
     }
 
     @media (max-width: $vp-768) {
-      left: 144px;
+      left: 43px;
     }
 
     @media (max-width: $vp-375) {
@@ -182,15 +165,17 @@
 
 
     @media (max-width: $vp-1024) {
-      &::before {
-        width: 26px;
-        height: 19px;
-        background-size: 26px 19px;
-      }
+      width: 20px;
+      height: 20px;
+      top: -10px;
+      left: -38px;
     }
 
     @media (max-width: $vp-768) {
-      left: 144px;
+      width: 20px;
+      height: 20px;
+      top: -2px;
+      left: 66px;
     }
 
   }

@@ -79,7 +79,6 @@ if (screen.width < 768) {
   }));
 }
 
-
 //-------------------------------------убирает аккордион +-
 // const classList = document.querySelectorAll(".page-footer__title")
 
