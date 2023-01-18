@@ -90,10 +90,22 @@
   fill: $basic-blue;
   transition: 0.3s;
 
-  &:hover,
-  &:focus {
-    fill: $font-white;
+  // &:hover,
+  // &:focus {
+  //   fill: $font-white;
+  // }
 }
+
+.benefits__icon {
+  fill: $basic-blue;
+}
+
+.benefits__icon:hover {
+  fill: $font-white;
+}
+
+.benefits__icon:focus {
+  fill: $font-white;
 }
 
 .benefits__item:hover .benefits__icon path {

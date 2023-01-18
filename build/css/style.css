@@ -754,8 +754,15 @@ button,
   transition: 0.3s;
 }
 
-.benefits__icon path:hover,
-.benefits__icon path:focus {
+.benefits__icon {
+  fill: #00B2FF;
+}
+
+.benefits__icon:hover {
+  fill: #F2F5F6;
+}
+
+.benefits__icon:focus {
   fill: #F2F5F6;
 }
 
@@ -1246,8 +1253,10 @@ button,
 }
 
 .page-header {
-  background: #041827 url("../img/background/header-bg-desktop.png") no-repeat center;
+  background-color: #041827;
   background-size: cover;
+  background-image: -webkit-image-set(url("../img/background/header-bg-desktop.png") 1x, url("../img/background/header-bg-desktop@2x.png") 2x);
+  background-image: image-set("../img/background/header-bg-desktop.png" 1x, "../img/background/header-bg-desktop@2x.png" 2x);
 }
 
 .page-header__background {
@@ -1408,19 +1417,19 @@ button,
   height: 63px;
   bottom: 0;
   right: 0;
-  background: #00B2FF url("../../img/svg/arrow-button-about.svg") no-repeat center;
+  background: #00B2FF url("../img/svg/arrow-button-about.svg") no-repeat center;
 }
 
 .product--card {
-  background-image: url("../../img/goods-services/production-printed-desktop.jpeg");
+  background-image: url("../img/goods-services/production-printed-desktop.jpeg");
 }
 
 .product--mounting {
-  background-image: url("../../img/goods-services/mounting-printed-desktop.jpeg");
+  background-image: url("../img/goods-services/mounting-printed-desktop.jpeg");
 }
 
 .product--components {
-  background-image: url("../../img/goods-services/accessories-lighting-equipment-desktop.jpeg");
+  background-image: url("../img/goods-services/accessories-lighting-equipment-desktop.jpeg");
 }
 
 .product__link {
@@ -1928,7 +1937,7 @@ button,
   }
 
   .product--card {
-    background-image: url("../../img/goods-services/production-printed-tablet.jpeg");
+    background-image: url("../img/goods-services/production-printed-tablet.jpeg");
   }
 
   .product--mounting {
@@ -1936,7 +1945,7 @@ button,
   }
 
   .product--components {
-    background-image: url("../../img/goods-services/accessories-lighting-equipment-tablet.jpeg");
+    background-image: url("../img/goods-services/accessories-lighting-equipment-tablet.jpeg");
   }
 
   .questions {
@@ -2309,7 +2318,12 @@ button,
   }
 
   .page-header__link--phone {
-    margin-left: 34px;
+    left: 4px;
+    top: -2px;
+  }
+
+  .page-header__link--email {
+    left: 35px;
   }
 
   .page-header__title {
@@ -2336,15 +2350,15 @@ button,
   }
 
   .product--card {
-    background-image: url("../../img/goods-services/mounting-printed-mobile.jpeg");
+    background-image: url("../img/goods-services/mounting-printed-mobile.jpeg");
   }
 
   .product--mounting {
-    background-image: url("../../img/goods-services/mounting-printed-mobile.jpeg");
+    background-image: url("../img/goods-services/mounting-printed-mobile.jpeg");
   }
 
   .product--components {
-    background-image: url("../../img/goods-services/accessories-lighting-equipment-mobile.jpeg");
+    background-image: url("../img/goods-services/accessories-lighting-equipment-mobile.jpeg");
   }
 
   .questions {
@@ -2426,12 +2440,6 @@ button,
 @media (min-width: 1270px) and (max-width: 1480px) {
   .page-footer__contacts {
     width: 40%;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
-  .page-header {
-    background-image: url("../img/background/header-bg-desktop@2x.png");
   }
 }
 
