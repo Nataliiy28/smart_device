@@ -114,6 +114,7 @@
   justify-content: flex-end;
   align-items: center;
   flex-wrap: wrap;
+  padding-left: 153px;
 
   @media (max-width: $vp-1024) {
     margin-top: 14px;
@@ -133,6 +134,7 @@
   font-family: $PTMono-Regular;
   transition: 0.3s;
   display: inline-block;
+  margin-right: 155px;
 
   &:hover,
   &:focus {
@@ -149,7 +151,8 @@
     }
 
     @media (max-width: $vp-768) {
-      left: 43px;
+      left: 18px;
+      top: -22px;
     }
 
     @media (max-width: $vp-375) {
@@ -161,8 +164,8 @@
   &--email {
     width: 20px;
     height: 20px;
-    top: -10px;
-    left: -38px;
+    top: -19px;
+    left: -40px;
 
 
     @media (max-width: $vp-1024) {

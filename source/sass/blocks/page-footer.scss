@@ -198,6 +198,7 @@
 
 .page-footer__sections-wrapper {
   display: flex;
+  gap: 139px;
 
   @media (min-width: 1024px) and (max-width: 1269px) {
     flex-direction: unset;

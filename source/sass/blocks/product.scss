@@ -106,18 +106,12 @@
 
 .product__link {
   display: block;
-  position: absolute;
+  min-height: 1;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   transition: 0.3s;
-
-  &:hover,
-  &:focus {
-    border: 1px solid $basic-blue;
-    z-index: 5;
-  }
 }
 
 .product__title {

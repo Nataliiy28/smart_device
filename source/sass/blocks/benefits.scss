@@ -96,6 +96,14 @@
   // }
 }
 
+a .benefits__icon:link {
+  fill: $basic-blue;
+}
+
+a .benefits__icon:hover .benefits__icon path{
+  fill: $font-white;
+}
+
 .benefits__icon {
   fill: $basic-blue;
 }
