@@ -1278,6 +1278,27 @@ a .benefits__icon:hover .benefits__icon path {
   z-index: 1;
 }
 
+.page-header__intro h1 {
+  font-family: "RobotoCondensed-Regular", "Arial", "sans-serif";
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: #F2F5F6;
+  padding-left: 355px;
+}
+
+.page-header__intro p {
+  font-family: "PTMono-Regular", "Arial", "sans-serif";
+  color: #F8FDFF;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  max-width: 981px;
+  padding-left: 355px;
+}
+
 .page-header__container {
   position: relative;
   min-height: 880px;
@@ -1361,27 +1382,13 @@ a .benefits__icon:hover .benefits__icon path {
 .page-header__title {
   font-family: "RobotoCondensed-Regular", "Arial", "sans-serif";
   font-weight: 400;
-  text-transform: uppercase;
-  font-size: 80px;
-  line-height: 94px;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  color: #F8FDFF;
   margin-top: 0;
-  padding-top: 163px;
+  padding-top: 310px;
   margin-left: 0px;
 }
 
-.page-header__description p {
-  margin: 27px 0px 4px 93px;
-  color: #F8FDFF;
-  font-size: 22px;
-  line-height: 34px;
-  max-width: 683px;
-}
-
 .page-header__button-consultation {
-  margin: 43px 0 0 0;
+  margin: 43px 0 0 355px;
   padding: 17px 44px;
   font-size: 16px;
   line-height: 19px;
@@ -1887,6 +1894,13 @@ a .benefits__icon:hover .benefits__icon path {
     display: none;
   }
 
+  .page-header__intro p {
+    margin: 27px 0px 4px 71px;
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 356px;
+  }
+
   .page-header__container {
     min-height: 900px;
   }
@@ -1918,13 +1932,6 @@ a .benefits__icon:hover .benefits__icon path {
     line-height: 70px;
     max-width: 470px;
     margin-top: 0;
-  }
-
-  .page-header__description p {
-    margin: 27px 0px 4px 71px;
-    font-size: 18px;
-    line-height: 28px;
-    max-width: 356px;
   }
 
   .page-header__button-consultation {
@@ -2330,6 +2337,13 @@ a .benefits__icon:hover .benefits__icon path {
     margin: 21px 0 0;
   }
 
+  .page-header__intro p {
+    margin: 22px 3px 0px 30px;
+    font-size: 16px;
+    line-height: 25px;
+    max-width: 100%;
+  }
+
   .page-header__top {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2359,13 +2373,6 @@ a .benefits__icon:hover .benefits__icon path {
     margin-left: 32px;
     font-size: 40px;
     line-height: 47px;
-    max-width: 100%;
-  }
-
-  .page-header__description p {
-    margin: 22px 3px 0px 30px;
-    font-size: 16px;
-    line-height: 25px;
     max-width: 100%;
   }
 

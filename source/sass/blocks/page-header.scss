@@ -24,7 +24,16 @@
   }
 }
 
-.page-header__intro h1{
+.page-header__intro h1 {
+  font-family: $RobotoCondensed-Regular;
+  font-weight: 600;
+  font-size: 70px;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: $basic-grey;
+  padding-left: 355px;
+
   @media (max-whidth: $vp-1440) {
     padding-left: 270px;
   }
@@ -51,6 +60,31 @@
   @media (max-whidth: $vp-320) {
     padding-left: 0;
   }
+}
+
+.page-header__intro p {
+  font-family: $PTMono-Regular;
+  color: $background-color-whte;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 34px;
+  max-width: 981px;
+  padding-left: 355px;
+
+  @media (max-width: $vp-1024) {
+    margin: 27px 0px 4px 71px;
+    font-size: 18px;
+    line-height: 28px;
+    max-width: 356px;
+  }
+
+  @media (max-width: $vp-375) {
+    margin: 22px 3px 0px 30px;
+    font-size: 16px;
+    line-height: 25px;
+    max-width: 100%;
+  }
+
 }
 
 .page-header__container {
@@ -194,15 +228,10 @@
 }
 
 .page-header__title {
+
   @include page-title;
-  text-transform: uppercase;
-  font-size: 80px;
-  line-height: 94px;
-  font-weight: 700;
-  letter-spacing: 0.07em;
-  color: $background-color-whte;
   margin-top: 0;
-  padding-top: 163px;
+  padding-top: 310px;
   margin-left: 0px;
 
   @media (max-width: $vp-1024) {
@@ -229,31 +258,8 @@
 
 }
 
-.page-header__description p{
-  margin: 27px 0px 4px 93px;
-  color: $background-color-whte;
-  font-size: 22px;
-  line-height: 34px;
-  max-width: 683px;
-
-
-  @media (max-width: $vp-1024) {
-    margin: 27px 0px 4px 71px;
-    font-size: 18px;
-    line-height: 28px;
-    max-width: 356px;
-  }
-
-  @media (max-width: $vp-375) {
-    margin: 22px 3px 0px 30px;
-    font-size: 16px;
-    line-height: 25px;
-    max-width: 100%;
-  }
-}
-
 .page-header__button-consultation {
-  margin: 43px 0 0 0;
+  margin: 43px 0 0 355px;
   padding: 17px 44px;
   font-size: 16px;
   line-height: 19px;
