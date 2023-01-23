@@ -384,28 +384,30 @@ template {
   display: none;
 }
 
+/* ============= Fonts */
+
 @font-face {
-  font-family: "PT Mono";
-  font-weight: 400;
   font-style: normal;
+  font-weight: 400;
+  font-family: "Roboto Condensed";
   font-display: swap;
-  src: local("PT Mono"), url("../../fonts/PTMono-Regular.woff2") format("woff2"), url("../../fonts/PTMono-Regular.woff") format("woff");
+  src: local("Roboto Condensed"), local("Roboto-Condensed"), url("../../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: "Roboto Condensed";
-  font-weight: 400;
   font-style: normal;
-  font-display: swap;
-  src: local("Roboto Condensed"), url("../../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-family: "Roboto Condensed";
   font-weight: 700;
-  font-style: normal;
+  font-family: "Roboto Condensed";
   font-display: swap;
-  src: local("Roboto Condensed"), url("../../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Bold.woff") format("woff");
+  src: local("Roboto Condensed"), local("Roboto-Condensed"), url("../../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "PT Mono";
+  font-display: swap;
+  src: local("PT Mono"), local("PT-Mono"), url("../../fonts/PTMono-Regular.woff2") format("woff2"), url("../fonts/pt-mono-v8-latin_cyrillic-regular.woff") format("woff");
 }
 
 *,
@@ -845,32 +847,6 @@ a .benefits__icon:hover .benefits__icon path {
   width: 100%;
 }
 
-/* ============= Fonts */
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "Roboto Condensed";
-  font-display: swap;
-  src: local("Roboto Condensed"), local("Roboto-Condensed"), url("../../fonts/RobotoCondensed-Regular.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Regular.woff") format("woff");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 700;
-  font-family: "Roboto Condensed";
-  font-display: swap;
-  src: local("Roboto Condensed"), local("Roboto-Condensed"), url("../../fonts/RobotoCondensed-Bold.woff2") format("woff2"), url("../../fonts/RobotoCondensed-Bold.woff") format("woff");
-}
-
-@font-face {
-  font-style: normal;
-  font-weight: 400;
-  font-family: "PT Mono";
-  font-display: swap;
-  src: local("PT Mono"), local("PT-Mono"), url("../../fonts/PTMono-Regular.woff2") format("woff2"), url("../fonts/pt-mono-v8-latin_cyrillic-regular.woff") format("woff");
-}
-
 .goods {
   padding: 89px 0 97px;
   background: #041827;
@@ -1274,7 +1250,7 @@ a .benefits__icon:hover .benefits__icon path {
   top: 0;
   padding-top: 30px;
   padding-bottom: 35px;
-  padding: 30px 0px 35px 0px;
+  padding: 10px 0px 20px 0px;
   z-index: 1;
 }
 
@@ -1308,7 +1284,7 @@ a .benefits__icon:hover .benefits__icon path {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 33px 26px 33px 30px;
+  padding: 10px 26px 33px 30px;
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
@@ -1327,6 +1303,7 @@ a .benefits__icon:hover .benefits__icon path {
   display: block;
   width: 100%;
   height: 100%;
+  margin-top: 21px;
 }
 
 .page-header__contacts {
@@ -1342,6 +1319,7 @@ a .benefits__icon:hover .benefits__icon path {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding-left: 153px;
+  gap: 98px;
 }
 
 .page-header__link {
@@ -1354,7 +1332,6 @@ a .benefits__icon:hover .benefits__icon path {
   -o-transition: 0.3s;
   transition: 0.3s;
   display: inline-block;
-  margin-right: 155px;
 }
 
 .page-header__link:hover,
@@ -1363,16 +1340,17 @@ a .benefits__icon:hover .benefits__icon path {
 }
 
 .page-header__link--phone {
-  left: 9px;
+  top: 2px;
+  left: -6px;
   margin-left: 0px;
   margin-right: 0px;
 }
 
 .page-header__link--email {
-  width: 20px;
-  height: 20px;
-  top: -19px;
-  left: -40px;
+  top: 2px;
+  left: -16px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .page-header__link-call {
@@ -1895,10 +1873,13 @@ a .benefits__icon:hover .benefits__icon path {
   }
 
   .page-header__intro p {
-    margin: 27px 0px 4px 71px;
+    padding-left: 69px;
+    margin-right: 40px;
+    padding-right: 20px;
+    margin: 27px 29px 4px 71px;
     font-size: 18px;
     line-height: 28px;
-    max-width: 356px;
+    max-width: 992px;
   }
 
   .page-header__container {
@@ -1920,14 +1901,10 @@ a .benefits__icon:hover .benefits__icon path {
   }
 
   .page-header__link--email {
-    width: 20px;
-    height: 20px;
-    top: -10px;
-    left: -38px;
+    left: 48px;
   }
 
   .page-header__title {
-    margin: 93px 0 0 63px;
     font-size: 60px;
     line-height: 70px;
     max-width: 470px;
@@ -1935,7 +1912,7 @@ a .benefits__icon:hover .benefits__icon path {
   }
 
   .page-header__button-consultation {
-    margin: 55px 0px 0px 114px;
+    margin: 55px 0px 0px 138px;
     padding: 17px 30px;
   }
 
@@ -2212,12 +2189,9 @@ a .benefits__icon:hover .benefits__icon path {
 
   .page-header__link--phone {
     left: 18px;
-    top: -22px;
   }
 
   .page-header__link--email {
-    width: 20px;
-    height: 20px;
     top: -2px;
     left: 66px;
   }
@@ -2491,19 +2465,27 @@ a .benefits__icon:hover .benefits__icon path {
 
 @media (max-whidth: 1440px) {
   .page-header__intro h1 {
-    padding-left: 270px;
+    padding-left: 355px;
   }
 }
 
 @media (max-whidth: 1280px) {
   .page-header__intro h1 {
-    padding: 163px 0px 0px 270px;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 74px;
+    letter-spacing: 0.07em;
+    padding-left: 125px;
   }
 }
 
 @media (max-whidth: 1024px) {
   .page-header__intro h1 {
-    margin-left: 200px;
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 74px;
+    letter-spacing: 0.07em;
+    padding-left: 125px;
   }
 }
 
@@ -2513,6 +2495,7 @@ a .benefits__icon:hover .benefits__icon path {
     position: absolute;
     left: 44px;
     top: -145px;
+    padding-left: 110px;
   }
 }
 

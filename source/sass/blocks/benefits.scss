@@ -62,7 +62,7 @@
   }
 }
 
-.benefits__title {
+.benefits__title  {
   margin: 15px 0 16px;
   position: relative;
   font-family: $RobotoCondensed-Regular;
@@ -100,7 +100,7 @@ a .benefits__icon:link {
   fill: $basic-blue;
 }
 
-a .benefits__icon:hover .benefits__icon path{
+a .benefits__icon:hover .benefits__icon path {
   fill: $font-white;
 }
 
