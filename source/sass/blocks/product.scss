@@ -15,7 +15,7 @@
     height: 63px;
     bottom: 0;
     right: 0;
-    background: $basic-blue url("../../img/svg/arrow-button-about.svg") no-repeat center;
+    background: $basic-blue url("../img/svg/arrow-button-about.svg") no-repeat center;
   }
 
   @media (max-width: $vp-1024) {
@@ -27,56 +27,91 @@
   }
 
   &--card {
-    background-image: url("../../img/goods-services/production-printed-desktop.jpeg");
+    background-color: $background-color-main;
+    background-image: url("../img/goods-services/card-1-desktop.jpeg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/goods-services/card-1-desktop@2x.jpeg");
+    }
+
 
     @media (max-width: $vp-1024) {
-      background-image: url("../../img/goods-services/production-printed-tablet.jpeg");
+      background-image: url("../img/goods-services/card-1-tablet.jpeg");
+
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/goods-services/card-1-tablet@2x.jpeg");
+      }
     }
 
     @media (max-width: $vp-375) {
-      background-image: url("../../img/goods-services/mounting-printed-mobile.jpeg");
+      background-image: url("../img/goods-services/card-1-mobile.jpeg");
+    }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/goods-services/card-1-mobile@2x.jpeg");
     }
   }
 
   &--mounting {
-    background-image: url("../../img/goods-services/mounting-printed-desktop.jpeg");
+    background-color: $background-color-main;
+    background-image: url("../img/goods-services/card-2-desktop.jpeg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/goods-services/card-2-desktop@2x.jpeg");
+    }
 
     @media (max-width: $vp-1024) {
-      background-image: url("../../img/goods-services/mounting-printed-tablet.jpeg");
+      background-image: url("../img/goods-services/card-2-tablet.jpeg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/goods-services/card-2-tablet@2x.jpeg");
+      }
     }
 
     @media (max-width: $vp-375) {
-      background-image: url("../../img/goods-services/mounting-printed-mobile.jpeg");
+      background-image: url("../img/goods-services/card-2-mobile.jpeg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/goods-services/card-2-mobile@2x.jpeg");
+      }
     }
   }
 
   &--components {
-    background-image: url("../../img/goods-services/accessories-lighting-equipment-desktop.jpeg");
+    background-color: $background-color-main;
+    background-image: url("../img/goods-services/card-3-desktop.jpeg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/goods-services/card-3-desktop@2x.jpeg");
+    }
 
     @media (max-width: $vp-1024) {
-      background-image: url("../../img/goods-services/accessories-lighting-equipment-tablet.jpeg");
+      background-image: url("../img/goods-services/card-3-tablet.jpeg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/goods-services/card-3-tablet@2x.jpeg");
+      }
     }
 
     @media (max-width: $vp-375) {
-      background-image: url("../../img/goods-services/accessories-lighting-equipment-mobile.jpeg");
+      background-image: url("../img/goods-services/card-3-mobile.jpeg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/goods-services/card-3-mobile@2x.jpeg");
+      }
     }
   }
 }
 
 .product__link {
   display: block;
-  position: absolute;
+  min-height: 1;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   transition: 0.3s;
-
-  &:hover,
-  &:focus {
-    border: 1px solid $basic-blue;
-    z-index: 5;
-  }
 }
 
 .product__title {

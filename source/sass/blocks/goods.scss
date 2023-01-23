@@ -31,12 +31,12 @@
 
 .goods__list {
   @include list-reset;
-  display: flex;
-  justify-content: flex-start;
-  // flex-wrap: wrap;
-  gap: 77px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 
   @media (max-width: $vp-1024) {
+    display: flex;
+    justify-content: flex-start;
     flex-direction: column;
   }
 }
@@ -44,7 +44,6 @@
 .goods__item {
   margin-right: 30px;
   margin-bottom: 30px;
-  width: calc(100% / 3 - 20px);
   height: 620px;
 
   &:last-child {

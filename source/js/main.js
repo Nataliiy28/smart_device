@@ -1,7 +1,7 @@
 import { iosVhFix } from './utils/ios-vh-fix';
 import { initModals } from './modules/modals/init-modals';
-
-
+import './modules/modals/button-hidden';
+import './modules/modals/phone-mask';
 'use strict';
 
 const ButtonConsalt = document.querySelector('.page-header__button-consultation');
@@ -24,160 +24,81 @@ const storageUserPhone = '';
 const storageText = '';
 const storageQuestion = '';
 
-if (ButtonConsalt && screen.width < MobileWidth) {
+//------------------------Меняет текст на кнопке => бесплатная консультация => получить бесплатную консультацию
+if (screen.width < MobileWidth) {
   ButtonConsalt.textContent = ButtonText;
 }
 
-// $(function () {
-//   $('.accordion__toggle').on('click', function () {
-//     var thisContent = $(this).next();
+//-------------------------открывает модальное окно
+let popupBg = document.querySelector('.modal__wrapper'); // Фон попап окна
+let popup = document.querySelector('.modal'); // Само окно
+let openPopupButtons = document.querySelectorAll('.page-header__button-consultation'); // Кнопки для показа окна
+let closePopupButton = document.querySelector('.modal__close'); // Кнопка для скрытия окна
 
-//     $('.accordion__toggle').not(this).removeClass('accordion__toggle--close');
-//     $('.accordion__content').not(thisContent).slideUp(400);
-//     thisContent.slideToggle(400);
-//     $(this).toggleClass('accordion__toggle--close');
-//   })
-// })
-
-// try {
-//   storageUserName = localStorage.getItem('user-name');
-//   storageUserPhone = localStorage.getItem('user-phone');
-//   storageText = localStorage.getItem('message');
-//   storageQuestion = localStorage.getItem('question');
-// } catch (err) {
-//   isStorageSupport = false;
-// }
-
-// if (UsserName) {
-//   UsserName.focus();
-//   UsserName.value = localStorage.getItem('user-name');
-//   UsserName.oninput = function () {
-//     localStorage.setItem('user-name', UsserName.value);
-//   };
-// }
-
-// if (UsserPhone) {
-//   UsserPhone.value = localStorage.getItem('user-phone');
-//   UsserPhone.oninput = function () {
-//     localStorage.setItem('user-phone', UsserPhone.value);
-//   };
-// }
-
-// if (MassageText) {
-//   MassageText.value = localStorage.getItem('message');
-//   MassageText.oninput = function () {
-//     localStorage.setItem('message', MassageText.value);
-//   };
-// }
-
-// if (QuestionText) {
-//   QuestionText.value = localStorage.getItem('question');
-//   QuestionText.oninput = function () {
-//     localStorage.setItem('question', QuestionText.value);
-//   };
-// }
-
-function openPopup() {
-  PopupModal.classList.add('modal--show');
-  Overly.classList.add('overlay--show');
-  UsserName.focus();
-  BODY_ELEMENT.classList.add('noscroll');
-}
-
-function closePopup() {
-  if (POPUP_ELEMENT.classList.contains('modal--show')) {
-    PopupModal.classList.remove('modal--show');
-    Overly.classList.remove('overlay--show');
-    BODY_ELEMENT.classList.remove('noscroll');
-  }
-}
-
-CallbackButtonConsalt.addEventListener('click', function (evt) {
-  evt.preventDefault();
-  openPopup();
+openPopupButtons.forEach((button) => { // Перебираем все кнопки
+  button.addEventListener('click', (e) => { // Для каждой вешаем обработчик событий на клик
+    e.preventDefault();// Предотвращаем дефолтное поведение браузера
+    popupBg.classList.add('active'); // Добавляем класс 'active' для фона
+    popup.classList.add('active'); // И для самого окна
+  })
 });
 
-CloseElement.addEventListener('click', function () {
-  closePopup();
+document.querySelector('.page-header__button-consultation').addEventListener('click', function (e) {
+  let popup = document.querySelector('.modal')
+  popup.style.display = popup.style.display === 'none' ? 'block' : 'none'
 });
 
-CloseElement.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === KeyEnter) {
-    closePopup();
-  }
+document.querySelector('.modal__close').addEventListener('click', function (e) {
+  let closePopupButton = document.querySelector('.modal')
+  closePopupButton.style.display = closePopupButton.style.display === 'none' ? 'block' : 'none'
 });
 
-window.addEventListener('keydown', function (evt) {
-  if (evt.keyCode === KeyEsc) {
-    closePopup();
-  }
-});
+//-----------------------------------
 
-Overly.addEventListener('click', function () {
-  closePopup();
-});
+//-----------------------------------меняет текст при открытии кнопки подробнее
 
-// $(document).mouseup(function (e) {
-//   const container = $('.modal__wrapper');
-//   if (e.target !== container[0] && !container.has(e.target).length) {
-//     closePopup();
-//   }
-// });
-
-// // Select all links with hashes
-// $(function () {
-//   $('a[href*="#"]')
-//     // Remove links that don't actually link to anything
-//     .not('[href="#"]')
-//     .not('[href="#0"]')
-//     .click(function (event) {
-//       // On-page links
-//       if (
-//         location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
-//         &&
-//         location.hostname == this.hostname
-//       ) {
-//         // Figure out element to scroll to
-//         const target = $(this.hash);
-//         target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-//         // Does a scroll target exist?
-//         if (target.length) {
-//           // Only prevent default if animation is actually gonna happen
-//           event.preventDefault();
-//           $('html, body').animate({
-//             scrollTop: target.offset().top
-//           }, 1000, function () {
-//             // Callback after animation
-//             // Must change focus!
-//             const $target = $(target);
-//             $target.focus();
-//             if ($target.is(":focus")) { // Checking if the target was focused
-//               return false;
-//             } else {
-//               $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
-//               $target.focus(); // Set focus again
-//             };
-//           });
-//         }
-//       }
-//     });
-// }());
-
-// $(function () {
-//   $('input[type="tel"]').mask('+7(000)000-00-00');
-// }());
-
-//-----------------------------------кнопка подробнее
-
-const button = document.querySelector('.about-company__button');
-const youdiv = document.querySelector('.about-company__text-detalied');
-button.addEventListener('click', function () {
-  youdiv.style.display = youdiv.style.display === 'none' ? 'block' : 'none';
-  button.innerHTML = (button.innerHTML === 'Подробнее') ? button.innerHTML = 'Скрыть всё' : button.innerHTML = 'Свернуть';
-});
+// const button = document.querySelector('.about-company__button');
+// const youdiv = document.querySelector('.about-company__text-detalied');
+// button.addEventListener('click', function () {
+//   youdiv.style.display = youdiv.style.display === 'none' ? 'block' : 'none';
+//   button.innerHTML = (button.innerHTML === 'Подробнее') ? button.innerHTML = 'Скрыть всё' : button.innerHTML = 'Подробнее';
+// // });
 
 // ---------------------------------
 
+//----------------------------------кнопка аккордиона +-
+if (screen.width < 768) {
+  const PlusButtonElement = document.querySelectorAll('.page-footer__title');
+  PlusButtonElement.forEach(element => element.addEventListener('click', function () {
+
+    if (element.classList.contains('hide_after')) {
+      element.classList.remove('hide_after');
+    } else {
+      element.classList.add('hide_after');
+    }
+  }));
+}
+
+//-------------------------------------убирает аккордион +-
+// const classList = document.querySelectorAll(".page-footer__title")
+
+// window.addEventListener("resize", function () {
+
+//   if (window.innerWidth < 700) {
+//     classList.forEach(item => {
+//       item.classList.remove("hide_after")
+//     })
+//   }
+
+//   else {
+//     console.log('more')
+//     classList.forEach(item => {
+//       item.classList.add("")
+//     })
+//   }
+// });
+
+//-------------------------------------
 window.addEventListener('DOMContentLoaded', () => {
 
   // Utils
