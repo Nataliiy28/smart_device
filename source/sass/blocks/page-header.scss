@@ -24,7 +24,7 @@
   }
 }
 
-.page-header__intro {
+.page-header__intro h1{
   @media (max-whidth: $vp-1440) {
     padding-left: 270px;
   }
@@ -229,7 +229,7 @@
 
 }
 
-.page-header__description {
+.page-header__description p{
   margin: 27px 0px 4px 93px;
   color: $background-color-whte;
   font-size: 22px;

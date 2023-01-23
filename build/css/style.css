@@ -1372,7 +1372,7 @@ a .benefits__icon:hover .benefits__icon path {
   margin-left: 0px;
 }
 
-.page-header__description {
+.page-header__description p {
   margin: 27px 0px 4px 93px;
   color: #F8FDFF;
   font-size: 22px;
@@ -1920,7 +1920,7 @@ a .benefits__icon:hover .benefits__icon path {
     margin-top: 0;
   }
 
-  .page-header__description {
+  .page-header__description p {
     margin: 27px 0px 4px 71px;
     font-size: 18px;
     line-height: 28px;
@@ -2362,7 +2362,7 @@ a .benefits__icon:hover .benefits__icon path {
     max-width: 100%;
   }
 
-  .page-header__description {
+  .page-header__description p {
     margin: 22px 3px 0px 30px;
     font-size: 16px;
     line-height: 25px;
@@ -2483,25 +2483,25 @@ a .benefits__icon:hover .benefits__icon path {
 }
 
 @media (max-whidth: 1440px) {
-  .page-header__intro {
+  .page-header__intro h1 {
     padding-left: 270px;
   }
 }
 
 @media (max-whidth: 1280px) {
-  .page-header__intro {
+  .page-header__intro h1 {
     padding: 163px 0px 0px 270px;
   }
 }
 
 @media (max-whidth: 1024px) {
-  .page-header__intro {
+  .page-header__intro h1 {
     margin-left: 200px;
   }
 }
 
 @media (max-whidth: 768px) {
-  .page-header__intro {
+  .page-header__intro h1 {
     padding-left: 100px;
     position: absolute;
     left: 44px;
@@ -2510,13 +2510,13 @@ a .benefits__icon:hover .benefits__icon path {
 }
 
 @media (max-whidth: 375px) {
-  .page-header__intro {
+  .page-header__intro h1 {
     padding-left: 0;
   }
 }
 
 @media (max-whidth: 320px) {
-  .page-header__intro {
+  .page-header__intro h1 {
     padding-left: 0;
   }
 }
