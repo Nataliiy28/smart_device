@@ -1,22 +1,40 @@
 .button {
-  margin: 0;
-  padding: 14px 28px;
   display: inline-block;
-  vertical-align: top;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  font-family: $RobotoCondensed-Bold;
+  padding: 16px 26px;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.05em;
+  font-family: $RobotoCondensed;
+  vertical-align: top;
+  text-align: center;
   color: $basic-grey;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  background-color: transparent;
   border: 1px solid transparent;
   border-radius: 3px;
   cursor: pointer;
-  background: transparent;
   transition: 0.3s;
+  user-select: none;
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &--white-transparent {
+    color: $basic-grey;
+
+    border-color: $basic-grey;
+
+    &:hover,
+    &:focus {
+      color: $basic-blue;
+
+      border-color: $basic-blue;
+      outline: none;
+    }
+  }
 
   &--accent {
     background: $basic-blue;
@@ -25,27 +43,33 @@
     &:focus {
       background: transparent;
       border-color: #ffffff;
+      outline: none;
+    }
+  }
+
+  &--blue-transparent {
+    color: $basic-blue;
+
+    border-color: $basic-blue;
+
+    &:hover,
+    &:focus {
+      color: $font-black;
+
+      border-color: $font-black;
+      outline: none;
     }
   }
 
   &--black {
+    color: $basic-grey;
     background-color: $font-black;
-    color: $font-white;
 
     &:hover,
     &:focus {
-      opacity: 0.7;
+      color: $font-black;
+      background-color: transparent;
+      outline: none;
     }
-  }
-}
-
-.link--light-accent {
-  border-color: $basic-blue;
-  color: $basic-blue;
-
-  &:hover,
-  &:focus {
-    color: $color-default-white;
-    background: $basic-blue;
   }
 }

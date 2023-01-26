@@ -1,63 +1,172 @@
 .goods {
-  padding: 89px 0 97px;
-  background: $font-black;
+  padding: 38px 0 142px;
   color: $color-default-white;
+  background: $font-black;
 
-  @media (max-width: $vp-1024) {
-    padding: 50px 0 32px;
+  @media (max-width: $tablet) {
+    padding: 26px 0 75px;
+  }
+
+  @media (max-width: $mobile) {
+    padding-bottom: 86px;
   }
 }
 
-.goods__title {
-  font-family: $RobotoCondensed-Regular;
-  @include page-title;
+.goods h2 {
   margin-bottom: 51px;
+  font-weight: 400;
   font-size: 36px;
   line-height: 51px;
+  font-family: $RobotoCondensed;
 
-  @media (max-width: $vp-1024) {
-    margin-bottom: 49px;
-    font-size: 32px;
-    line-height: 45px;
+  @media (max-width: $tablet) {
+    margin-bottom: 37px;
   }
 
-  @media (max-width: $vp-768) {
-    margin-left: 10px;
-    margin-bottom: 42px;
+  @media (max-width: $mobile) {
+    margin-bottom: 28px;
     font-size: 28px;
     line-height: 39px;
   }
 }
 
-.goods__list {
-  @include list-reset;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.goods h2>span {
+  &:first-child {
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
 
-  @media (max-width: $vp-1024) {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
+  &:last-child {
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: block;
+    }
   }
 }
 
-.goods__item {
-  margin-right: 30px;
-  margin-bottom: 30px;
-  height: 620px;
+.goods__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px 85px;
 
-  &:last-child {
-    margin-right: 0;
+  @include list-reset;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.goods__link {
+  position: relative;
+  display: block;
+  min-height: 650px;
+  padding: 48px 40px 60px;
+  color: $color-default-white;
+  background-color: $basic-blue;
+  background-repeat: no-repeat;
+  background-size: cover;
+  user-select: none;
+
+  @media (min-width: 1024px) {
+    @include retina-bg("../img/goods-services/card-1-desktop",
+      $file_ext: "jpg"
+    );
   }
 
-  @media (max-width: $vp-1024) {
-    margin-right: 0;
-    margin-bottom: 46px;
-    width: 100%;
-    height: 256px;
+  @media (max-width: $tablet) {
+    min-height: 250px;
+    padding: 37px 45px;
+
+    @include retina-bg("../img/goods-services/card-1-tablet", $file_ext: "jpg");
   }
 
-  @media (max-width: $vp-768) {
-    margin-bottom: 30px;
+  @media (max-width: $mobile) {
+    padding: 26px 30px;
+
+    @include retina-bg("../img/goods-services/card-1-mobile", $file_ext: "jpg");
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    background-color: #00b2ff;
+    background-image: url("../img/svg/arrow-button-about.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 3px 0 0 0;
+
+    @include vp-767 {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    outline: 2px solid #00b2ff;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+// Меняем фоновые картинки для разных карточек
+.goods__item:nth-child(2n) .goods__link {
+  @media (min-width: 1024px) {
+    @include retina-bg("../img/goods-services/card-2-desktop",
+      $file_ext: "jpg"
+    );
+  }
+
+  @media (max-width: $tablet) {
+    @include retina-bg("../img/goods-services/card-2-tablet", $file_ext: "jpg");
+  }
+
+  @media (max-width: $mobile) {
+    @include retina-bg("../img/goods-services/card-2-mobile", $file_ext: "jpg");
+  }
+}
+
+.goods__item:nth-child(3n) .goods__link {
+  @media (min-width: 1024px) {
+    @include retina-bg("../img/goods-services/card-3-desktop",
+      $file_ext: "jpg"
+    );
+  }
+
+  @media (max-width: $tablet) {
+    @include retina-bg("../img/goods-services/card-3-tablet", $file_ext: "jpg");
+  }
+
+  @media (max-width: $mobile) {
+    @include retina-bg("../img/goods-services/card-3-mobile", $file_ext: "jpg");
+  }
+}
+
+.goods__link h3 {
+  max-width: 173px;
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  font-family: $RobotoCondensed;
+
+  @include vp-1023 {
+    max-width: 150px;
+  }
+
+  @include vp-767 {
+    max-width: 135px;
+
+    font-size: 18px;
   }
 }

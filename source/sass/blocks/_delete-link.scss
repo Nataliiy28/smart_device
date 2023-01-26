@@ -1,0 +1,32 @@
+.link {
+  display: inline-block;
+  margin: 0;
+  padding: 14px 28px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: $RobotoCondensed;
+  vertical-align: top;
+  text-align: center;
+  color: $basic-grey;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.link--light {
+  margin-left: 163px;
+
+  border-color: $basic-grey;
+
+  &:hover,
+  &:focus {
+    background: $basic-blue;
+    border-color: $basic-blue;
+  }
+}

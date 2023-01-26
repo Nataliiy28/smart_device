@@ -1,54 +1,155 @@
-.accordion__toggle {
+.accordion {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 20px 125px;
+  padding: 0 38px;
 
-  @media (max-width: $vp-768) {
-    transition: 0.4s;
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 28px;
+    padding: 0;
+  }
+
+  @media (max-width: $mobile) {
+    display: block;
+    margin: 0 -25px;
+    padding-top: 24px;
+  }
+}
+
+.accordion__sections {
+  @media (max-width: $mobile) {
+    border-top: 1px solid rgba(248, 253, 255, 0.7);
+  }
+
+  &:last-child {
+    @media (max-width: $mobile) {
+      border-bottom: 1px solid rgba(248, 253, 255, 0.7);
+    }
+  }
+}
+
+.accordion__title {
+  padding: 7px 0 21px;
+
+  pointer-events: none;
+  user-select: none;
+
+  @media (max-width: $mobile) {
     position: relative;
-    margin-bottom: 31px;
+    padding: 22px 25px 21px;
     cursor: pointer;
-
-    &::before,
-    &::after {
-      position: absolute;
-      content: "";
-      background-color: #c4c4c4;
-    }
-
-    // кнопка + -
-    &::before {
-      width: 16px;
-      height: 1px;
-      top: 32px;
-      right: 15px;
-    }
-
-    &::after {
-      width: 1px;
-      height: 16px;
-      top: 25px;
-      right: 23px;
-      opacity: 1;
-    }
-
-
+    pointer-events: all;
   }
-}
 
-// }
-
-.accordion__toggle--close {
+  &::before,
   &::after {
-    opacity: 0;
+    content: "";
+    position: absolute;
+    top: 27px;
+    right: 26px;
+    width: 15px;
+    height: 1px;
+    background-color: #c4c4c4;
+  }
+
+  &::after {
+    transform: rotate(90deg);
   }
 }
 
-.accordion__content {
-  @media (max-width: $vp-768) {
+.accordion__sections[open] .accordion__title::after {
+  @media (max-width: $mobile) {
     display: none;
   }
 }
 
-.accordion__content--show {
-  @media (max-width: $vp-768) {
+.accordion__sections[open] .accordion__title {
+  @media (max-width: $mobile) {
+    padding-bottom: 17px;
+  }
+}
+
+.accordion__title h2 {
+  margin: 0;
+
+  font-size: 15px;
+  line-height: 16px;
+  font-family: $RobotoCondensed;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.accordion__title:focus h2 {
+  color: $basic-blue;
+}
+
+.accordion__container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+
+  @media (max-width: $tablet) {
     display: block;
   }
+
+  @media (max-width: $mobile) {
+    padding: 0 25px 10px;
+  }
+}
+
+.accordion__list {
+  @include list-reset;
+}
+
+.accordion__list+.accordion__list {
+  margin-left: 30px;
+
+  @media (max-width: $tablet) {
+    margin-left: 0;
+  }
+}
+
+.accordion__list-item {
+  margin-bottom: 6px;
+
+  &:first-child {
+    @media (max-width: $mobile) {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.accordion__list-link {
+  display: inline-block;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.7);
+  user-select: none;
+
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $basic-blue;
+    outline: none;
+  }
+}
+
+.accordion__list--menu .accordion__list-link {
+  max-width: 220px;
+}
+
+.accordion__sections::marker,
+.accordion__title::marker,
+.accordion__sections::-webkit-details-marker,
+.accordion__title::-webkit-details-marker {
+  display: none;
+}
+
+.accordion__title,
+.accordion__sections {
+  list-style: none;
 }
