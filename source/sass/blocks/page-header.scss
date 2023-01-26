@@ -1,307 +1,550 @@
 .page-header {
-  background-color: $background-color-main;
-  // background: url("../img/background/header-bg-desktop.png") no-repeat center;
+  background-color: $font-black;
   background-size: cover;
-  background-image: image-set("../img/background/header-bg-desktop.png"1x, "../img/background/header-bg-desktop@2x.png"2x);
+
+  //  Воспользуемся миксином и пропишем корректно свойства для картинки и webp. Картинка должна быть в jpg формате, а не в png
+  // background-image: image-set(
+  //   "../img/background/header-bg-desktop.png" 1x,
+  //   "../img/background/header-bg-desktop@2x.png" 2x
+  // );
+  // background: url("../img/background/header-bg-desktop.png") no-repeat center;
+
   // @media (min-resolution: 2dppx) {
   //   background-image: url("../img/background/header-bg-desktop@2x.png");
   // }
+
+  @media (min-width: 1024px) {
+    @include retina-bg("../img/background/header-bg-desktop", $file_ext: "jpg");
+  }
+
+  @media (max-width: $tablet) {
+    @include retina-bg("../img/background/header-bg-tablet", $file_ext: "jpg");
+  }
+
+  @media (max-width: $mobile) {
+    @include retina-bg("../img/background/header-bg-mobile", $file_ext: "jpg");
+  }
 }
 
+// z-index пропишем побольше, что бы меню всегда было выше других блоков
 .page-header__background {
-  background: linear-gradient($background-color-main 80%, transparent);
-  width: 100%;
   position: fixed;
-  left: 0;
   top: 0;
-  padding-top: 30px;
-  padding-bottom: 35px;
-  padding: 10px 0px 20px 0px;
-  z-index: 1;
+  // Лучше прописать right 0
+  right: 0;
+  left: 0;
+  // z-index: 1;
+  z-index: 10;
+  // width: 100%;
+  // Ты прописываешь по два раза паддинги с разными значениями
+  // padding: 10px 0 20px 0;
+  // padding-top: 30px;
+  // padding-bottom: 35px;
 
-  @media (max-width: $vp-768) {
-    padding: 20px 33px 20px 33px;
+  padding: 32px 0;
+  // Градиент прописан не по макету
+  // background: linear-gradient($background-color-main 80%, transparent);
+
+  background-image: linear-gradient(
+    180deg,
+    $font-black 84.9%,
+    transparent 100%
+  );
+
+  // Правильно пишем брейкпоинты
+  // @media (max-width: $vp-768)
+  @media (max-width: $tablet) {
+    padding: 20px 0;
+  }
+
+  @media (max-width: $mobile) {
+    padding: 15px 0;
   }
 }
 
-.page-header__intro h1 {
-  font-family: $RobotoCondensed-Regular;
-  font-weight: 600;
-  font-size: 70px;
-  line-height: 94px;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
-  color: $basic-grey;
-  padding-left: 355px;
+// Сделаем всю шапку на грид, что бы лучше контролировать переполенение
+.page-header__nav {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 60px;
+  align-items: start;
 
-  @media (max-whidth: $vp-1440) {
-    padding-left: 355px;
-  }
-
-  @media (max-whidth:$vp-1280) {
-    font-weight: 600;
-    font-size: 64px;
-    line-height: 74px;
-    letter-spacing: .07em;
-    padding-left: 125px;
-  }
-
-  @media (max-whidth: $vp-1024) {
-    font-weight: 600;
-    font-size: 64px;
-    line-height: 74px;
-    letter-spacing: .07em;
-    padding-left: 125px;
-  }
-
-  @media (max-whidth: $vp-768) {
-    padding-left: 100px;
-    position: absolute;
-    left: 44px;
-    top: -145px;
-    padding-left: 110px;
-  }
-
-  @media (max-whidth:$vp-375) {
-    padding-left: 0;
-  }
-
-  @media (max-whidth: $vp-320) {
-    padding-left: 0;
-  }
-}
-
-.page-header__intro p {
-  font-family: $PTMono-Regular;
-  color: $background-color-whte;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 34px;
-  max-width: 981px;
-  padding-left: 355px;
-
-  @media (max-width: $vp-1024) {
-    padding-left: 69px;
-    margin-right: 40px;
-    padding-right: 20px;
-    margin: 27px 29px 4px 71px;
-    font-size: 18px;
-    line-height: 28px;
-    max-width: 992px;
-  }
-
-  @media (max-width: $vp-375) {
-    margin: 22px 3px 0px 30px;
-    font-size: 16px;
-    line-height: 25px;
-    max-width: 100%;
-  }
-
-}
-
-.page-header__container {
-  position: relative;
-  min-height: 880px;
-
-  @media (max-width: $vp-1024) {
-    min-height: 900px;
-  }
-
-  @media (max-width: $vp-768) {
-    min-height: 647px;
-    padding-top: 1px;
-    padding-bottom: 98px;
-  }
-
-}
-
-.page-header__top {
-  display: flex;
-  padding: 10px 26px 33px 30px;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-
-  @media (max-width: $vp-1024) {
-    padding: 20px 50px 20px 50px;
-  }
-
-  @media (max-width:$vp-768) {
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, auto);
+    gap: 20px;
     justify-content: space-between;
-    padding-top: 20px;
-    padding-right: 80px;
-    padding-bottom: 20px;
-    padding-left: 55px;
-  }
-
-  @media (max-width: $vp-375) {
-    display: flex;
-    padding: 16px 0;
   }
 }
 
+// Старайся свойства писать в том же порядке, что они идут в html
+// Прописать размеры логотипа
 .page-header__logo {
   display: block;
+  width: 215px;
+  height: 55px;
+
+  @media (max-width: $mobile) {
+    width: 35px;
+    height: 35px;
+  }
+
+  // Не прописаны состояния при взаимодействиях
+  &:hover,
+  &:focus {
+    outline: none;
+    opacity: 0.8;
+  }
+
+  // Нет свойств для нажатия
+  &:active {
+    opacity: 0.5;
+  }
 }
 
-.page-header__logo-img {
+// Для картинки прописываем только ширину и высоту 100% Размеры картинки пишем в ссылке
+// .page-header__logo-img
+.page-header__logo img {
   display: block;
   width: 100%;
   height: 100%;
-  margin-top: 21px;
+  // margin-top: 21px;
 
-  @media (max-width: $vp-375) {
-    width: 38px;
-    height: 38px;
-  }
+  // @media (max-width: $vp-375) {
+  //   width: 38px;
+  //   height: 38px;
+  // }
 }
 
+// gap  в некоторых браузерах некорректно работает с flex, поэтому пока используем его только с grid
 .page-header__contacts {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-left: 153px;
-  gap: 98px;
+  // display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  // gap: 98px;
+  gap: 10px 125px;
+  justify-content: center;
+  // Чуть пододвинем по макету
+  padding: 12px 0;
 
-  @media (max-width: $vp-1024) {
-    margin-top: 14px;
-    align-self: flex-start;
+  // flex-wrap: wrap;
+  // justify-content: flex-end;
+  // align-items: center;
+  // padding-left: 153px;
+  // Пишем промежуточные брейкпоинты
+  @media (max-width: 1080px) {
+    gap: 40px;
   }
 
-  @media (max-width: $vp-375) {
-    margin-top: 8px;
+  // Правильно прописываем брейкпоинты
+  // @media (max-width: $vp-1024)
+  @media (max-width: $tablet) {
+    //   align-self: flex-start;
+    //   margin-top: 14px;
+    padding: 12px 30px;
+  }
+
+  // Правильно прописываем брейкпоинты
+  // @media (max-width: $vp-375)
+  @media (max-width: $mobile) {
+    //   margin-top: 8px;
+    padding: 5px 20px;
   }
 }
 
+// Так как иконки сделаны через svg спрайт, проще всего будет сделать на гридах
 .page-header__link {
   position: relative;
+  // display: inline-block;
+
+  display: grid;
+  grid-template-columns: 20px auto;
+  gap: 5px 12px;
+
   font-size: 16px;
   line-height: 18px;
-  color: rgba(255, 255, 255, 1);
-  font-family: $PTMono-Regular;
-  transition: 0.3s;
-  display: inline-block;
+  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
+  font-family: $PTMono;
+  // font-family: $PTMono-Regular;
+  // В rgba прописываем только цвета с прозрачностью
+  // color: rgba(255, 255, 255, 1);
+  color: $basic-grey;
 
+  transition: 0.3s;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: 0;
+
+    font-size: 0;
+    line-height: 0;
+  }
 
   &:hover,
   &:focus {
-    color: rgba(255, 255, 255, 0.5);
+    // Можно сделать поярче
+    // color: rgba(255, 255, 255, 0.5);
+    color: $basic-blue;
+
+    outline: none;
   }
 
-  &--phone {
-    top: 2px;
-    left: -6px;
-    margin-left: 0px;
-    margin-right: 0px;
-
-    @media (max-width: $vp-1024) {
-      margin-left: 45px;
-    }
-
-    @media (max-width: $vp-768) {
-      left: 18px;
-      // top: -22px;
-    }
-
-    @media (max-width: $vp-375) {
-      left: 4px;
-      top: -2px;
-    }
+  // Нет свойств для нажатия
+  &:active {
+    opacity: 0.5;
   }
 
-  &--email {
-    top: 2px;
-    left: -16px;
-    margin-left: 0px;
-    margin-right: 0px;
+  // &--phone {
+  //   top: 2px;
+  //   left: -6px;
 
+  //   margin-right: 0;
+  //   margin-left: 0;
 
-    @media (max-width: $vp-1024) {
-      left: 48px;
-    }
+  //   @media (max-width: $vp-1024) {
+  //     margin-left: 45px;
+  //   }
 
-    @media (max-width: $vp-768) {
-      top: -2px;
-      left: 66px;
-    }
+  //   @media (max-width: $vp-768) {
+  //     left: 18px;
+  //     // top: -22px;
+  //   }
 
-    @media (max-width: $vp-375) {
-      left: 35px;
-    }
+  //   @media (max-width: $vp-375) {
+  //     top: -2px;
+  //     left: 4px;
+  //   }
+  // }
 
-  }
+  // &--email {
+  //   top: 2px;
+  //   left: -16px;
+
+  //   margin-right: 0;
+  //   margin-left: 0;
+
+  //   @media (max-width: $vp-1024) {
+  //     left: 48px;
+  //   }
+
+  //   @media (max-width: $vp-768) {
+  //     top: -2px;
+  //     left: 66px;
+  //   }
+
+  //   @media (max-width: $vp-375) {
+  //     left: 35px;
+  //   }
+  // }
 }
 
+// Отодвигаем кнопку не от левого края, а от правого. Правим по макету. Кнопка удаляется начиная с планшета
 .page-header__link-call {
-  margin-left: 48px;
+  // margin-left: 48px;
+  margin-right: 60px;
+  padding: 12px 17px;
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
 }
 
-.page-header__title {
+//
+// Блок page-header__intro
+//
 
-  @include page-title;
-  margin-top: 0;
-  padding-top: 310px;
-  margin-left: 0px;
+// Сделаем вертикальные отступы
+.page-header__intro {
+  padding: 250px 0 280px;
 
-  @media (max-width: $vp-1024) {
-    // margin: 93px 0 0 63px;
-    font-size: 60px;
-    line-height: 70px;
-    max-width: 470px;
-    margin-top: 0;
+  @media (max-width: $tablet) {
+    padding: 137px 0 205px;
   }
 
-  @media (max-width: $vp-768) {
-    margin-left: 32px;
-    font-weight: 700;
-    font-size: 50px;
+  @media (max-width: $mobile) {
+    padding: 126px 0 190px;
+  }
+}
+
+// Не нужно отодвигать каждый элемент, для этого есть родительская обвертка
+.page-header__intro-container {
+  padding-left: 145px;
+}
+
+// Не нужно отодвигать каждый элемент, для этого есть родительская обвертка
+// Характеристики шрифта не по макету, делаем нижний маргин что бы отодвинуть текст по макету
+.page-header__intro h1 {
+  margin-bottom: 33px;
+  // padding-left: 355px;
+  // font-weight: 600;
+  // font-size: 70px;
+  // line-height: 94px;
+
+  font-size: 80px;
+  line-height: 94px;
+  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
+  // font-family: $RobotoCondensed-Regular;
+  font-family: $RobotoCondensed;
+  color: $basic-grey;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+
+  // Не правильно прописано правило max-width
+  // @media (max-whidth: $vp-1440) {
+  //   padding-left: 355px;
+  // }
+
+  // Не правильно прописано правило max-width и не правильно выбрана ширина браузера. Так же правильно пишем брейкпоинты
+  // Не правильно прописаны текстовые характеристики
+  // @media (max-whidth: $vp-1280)
+  @media (max-width: $tablet) {
+    margin-bottom: 0;
+    // padding-left: 125px;
+    // font-weight: 600;
+
+    font-size: 64px;
+    // line-height: 74px;
     line-height: 75px;
+    //  letter-spacing такой же уже прописан в версии десктопа
+    // letter-spacing: 0.07em;
   }
 
-  @media (max-width: $vp-375) {
-    margin-left: 32px;
-    font-size: 40px;
-    line-height: 47px;
-    max-width: 100%;
+  @media (max-width: $mobile) {
+    margin-bottom: 8px;
+
+    font-size: 36px;
+    line-height: 42px;
   }
 
+  // Не правильно прописано правило max-width
+  // @media (max-whidth: $vp-1024) {
+  //   padding-left: 125px;
+
+  //   font-weight: 600;
+  //   font-size: 64px;
+  //   line-height: 74px;
+  //   letter-spacing: 0.07em;
+  // }
+
+  // Не правильно прописано правило max-width
+  // @media (max-whidth: $vp-768) {
+  //   position: absolute;
+  //   top: -145px;
+  //   left: 44px;
+
+  //   padding-left: 100px;
+  //   padding-left: 110px;
+  // }
+
+  // Не правильно прописано правило max-width
+  // @media (max-whidth: $vp-375) {
+  //   padding-left: 0;
+  // }
+
+  // Не правильно прописано правило max-width
+  // @media (max-whidth: $vp-320) {
+  //   padding-left: 0;
+  // }
 }
 
+// Левый отступ делается от класса родителя. Абзац по умолчанию жирность 400 дуюлировать не нужно. Обнуляем margin, что бы не получилось "схлопывание" из-за маргина от заголовка и нижним маргином отодвигаем кнопку. Так же пропишем свойство, что бы все буквы были прописными. По макету макс ширина текста 685px.
+.page-header__intro p {
+  // max-width: 981px;
+  max-width: 685px;
+  margin: 0 0 46px;
+  // padding-left: 355px;
+  // font-weight: 400;
+
+  font-size: 22px;
+  line-height: 34px;
+  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
+  // font-family: $PTMono-Regular;
+  font-family: $PTMono;
+  // Цвет текста не по макету
+  // color: $background-color-whte;
+  color: $basic-grey;
+  text-transform: lowercase;
+
+  // Планшетная ширина начинается с 1023px
+  // @media (max-width: $vp-1024)
+  @media (max-width: $tablet) {
+    // max-width: 992px;
+    // Отступы в таком количестве не нужны
+    // margin: 27px 29px 4px 71px;
+    // margin-right: 40px;
+    // padding-right: 20px;
+    // padding-left: 69px;
+    // Размер текста меняется на мобильных устройствах
+    // font-size: 18px;
+    // line-height: 28px;
+    margin-bottom: 57px;
+  }
+
+  // Мобильная версия начинается с 767px
+  // @media (max-width: $vp-375)
+  @media (max-width: $mobile) {
+    margin-bottom: 44px;
+    // max-width: 100%;
+    // Отступы убрать
+    // margin: 22px 3px 0 30px;
+    // Размеры шрифта не по макету
+    // font-size: 16px;
+    // line-height: 25px;
+
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
+
+// .page-header__container {
+//   position: relative;
+
+//   min-height: 880px;
+
+//   @media (max-width: $vp-1024) {
+//     min-height: 900px;
+//   }
+
+//   @media (max-width: $vp-768) {
+//     min-height: 647px;
+//     padding-top: 1px;
+//     padding-bottom: 98px;
+//   }
+// }
+
+// .page-header__top {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-evenly;
+//   align-items: center;
+//   padding: 10px 26px 33px 30px;
+
+//   @media (max-width: $vp-1024) {
+//     padding: 20px 50px 20px 50px;
+//   }
+
+//   @media (max-width: $vp-768) {
+//     justify-content: space-between;
+//     padding-top: 20px;
+//     padding-right: 80px;
+//     padding-bottom: 20px;
+//     padding-left: 55px;
+//   }
+
+//   @media (max-width: $vp-375) {
+//     display: flex;
+//     padding: 16px 0;
+//   }
+// }
+
+// Для заголовка уже есть свойства прописаные выше и текстовые элементы стилизуются без классов
+// .page-header__title {
+//   margin-top: 0;
+//   margin-left: 0;
+//   padding-top: 310px;
+
+//   //   // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
+//   // @include page-title;
+
+//   @media (max-width: $vp-1024) {
+//     max-width: 470px;
+//     margin-top: 0;
+//     // margin: 93px 0 0 63px;
+
+//     font-size: 60px;
+//     line-height: 70px;
+//   }
+
+//   @media (max-width: $vp-768) {
+//     margin-left: 32px;
+
+//     font-weight: 700;
+//     font-size: 50px;
+//     line-height: 75px;
+//   }
+
+//   @media (max-width: $vp-375) {
+//     max-width: 100%;
+//     margin-left: 32px;
+
+//     font-size: 40px;
+//     line-height: 47px;
+//   }
+// }
+
+// Не нужно делать такие большие маргины, нужные паддинги уже есть в классе button
+// Размер текста не по макету
 .page-header__button-consultation {
-  margin: 43px 0 0 355px;
-  padding: 17px 44px;
-  font-size: 16px;
-  line-height: 19px;
+  // margin: 43px 0 0 355px;
+  // padding: 17px 44px;
+  // font-size: 16px;
+  // line-height: 19px;
+  font-size: 18px;
+  line-height: 21px;
 
-  @media (max-width: $vp-1024) {
-    margin: 55px 0px 0px 138px;
-    padding: 17px 30px;
+  // Правильно пишем брейкпоинты
+  // @media (max-width: $vp-1024)
+  @media (max-width: $tablet) {
+    // margin: 55px 0 0 138px;
+    // padding: 17px 30px;
+    margin-left: 45px;
   }
 
-  @media (max-width: $vp-375) {
-    margin: 50px 0px 10px 25px;
-    padding: 12px 10px 12px 10px;
+  // Правильно пишем брейкпоинты
+  // @media (max-width: $vp-375)
+  @media (max-width: $mobile) {
+    display: block;
+    // margin: 50px 0 10px 25px;
+    // padding: 12px 10px 12px 10px;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+    padding: 11px;
+
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+// Скрываем и показываем разный текст в кнопке
+.page-header__button-consultation span {
+  &:first-child {
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &:last-child {
+    display: none;
+
+    @media (max-width: $mobile) {
+      display: block;
+    }
   }
 }
 
-.page-header__scroll-btn {
-  margin: 132px 0 0 -40px;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
-  line-height: 16px;
-  transform: rotate(-90deg);
-  transition: 0.3s;
+// Такого элемента нет в макете
+// .page-header__scroll-btn {
+//   margin: 132px 0 0 -40px;
 
-  &:hover,
-  &:focus {
-    color: rgba(255, 255, 255, 1);
-  }
-}
+//   font-size: 14px;
+//   line-height: 16px;
+//   color: rgba(255, 255, 255, 0.5);
 
-.page-header__tablet-hidden {
-  @media (max-width: $vp-1024) {
-    @include visually-hidden;
-    // display: none;
-  }
-}
+//   transform: rotate(-90deg);
+
+//   transition: 0.3s;
+
+//   &:hover,
+//   &:focus {
+//     color: rgba(255, 255, 255, 1);
+//   }
+// }
+
+// Данный класс избыточен
+// .page-header__tablet-hidden {
+//   @media (max-width: $vp-1024) {
+//     // Элемент удаляется со страницы, а не скрывается
+//     // @include visually-hidden;
+//     display: none;
+//   }
+// }

@@ -1,0 +1,44 @@
+.social {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 15px;
+  justify-content: start;
+  margin: 0 0 0 12px;
+  padding: 0;
+
+  list-style: none;
+
+  @media (max-width: $tablet) {
+    margin: 5px -5px 0 0;
+  }
+
+  @media (max-width: $mobile) {
+    margin: 0 auto;
+  }
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+
+  color: $color-default-white;
+
+  &:hover,
+  &:focus {
+    color: $basic-blue;
+
+    outline: none;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+// У иконок удалить fill в svg и path
+.social__link svg {
+  fill: currentColor;
+}

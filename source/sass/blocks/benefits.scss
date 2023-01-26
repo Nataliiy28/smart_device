@@ -1,129 +1,237 @@
+// Корректируем паддинг по макету
 .benefits {
-  padding: 112px 0;
+  // padding: 112px 0;
+  padding: 121px 0 50px;
 
-  @media (max-width: $vp-1024) {
-    padding: 59px 0 82px;
+  // Правильно прописываем брейкпоинты
+  // @media (max-width: $vp-1024)
+  @media (max-width: $tablet) {
+    padding: 80px 0 40px;
   }
 
-  @media (max-width: $vp-768) {
-    padding: 37px 0 65px;
+  // Правильно прописываем брейкпоинты
+  // @media (max-width: $vp-768)
+  @media (max-width: $mobile) {
+    padding: 50px 0 10px;
   }
 }
 
+// Постройка сетки типа карточек лучше всего делать на гридах. И убираем маргин? паддинг и маркеры, имеющийся по умолчанию
 .benefits__list {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  // display: flex;
+  // flex-wrap: wrap;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px 32px;
+  margin: 0;
+  padding: 0;
 
-  @media (min-width: $vp-768) {
-    padding-left: 20px;
+  list-style: none;
+
+  // @media (min-width: $vp-768) {
+  //   padding-left: 20px;
+  // }
+  @media (max-width: $tablet) {
+    gap: 30px 28px;
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: 1fr;
   }
 }
 
+// Раз сетка сделана на гридах высчитывать ширину блока не нужно. Минимальную высоту проставим по макету. border-box - уже прописан для всех элементов на странице, дублировать не нужно, li - и так block. Паддинг по макету другой. Левый бордер по макету 5px
 .benefits__item {
-  box-sizing: border-box;
-  margin-bottom: 30px;
-  padding: 39px 43px;
-  display: block;
-  width: 48.7%;
-  min-height: 299px;
+  min-height: 300px;
+  // display: block;
+  // box-sizing: border-box;
+  // width: 48.7%;
+  // min-height: 299px;
+  // margin-bottom: 30px;
+  // padding: 39px 43px;
+  padding: 40px;
+  // background-color: $color-default-white;
+
   border: 1px solid #ebebeb;
-  border-left: 3px solid $basic-blue;
-  background-color: $color-default-white;
+  // border-left: 3px solid $basic-blue;
+  border-left: 5px solid $basic-blue;
+
   transition: 0.3s;
 
-  &:nth-last-child(-n+2) {
-    margin-bottom: 0;
+  // &:nth-last-child(-n + 2) {
+  //   margin-bottom: 0;
+  // }
+
+  @media (max-width: $tablet) {
+    min-height: 360px;
+    padding: 40px 40px 30px;
   }
 
+  @media (max-width: $mobile) {
+    min-height: 340px;
+    padding: 30px 25px 35px;
+  }
+
+  // По макету другие цвета у текста. И нет смысла его прописавать так как у каждого элемента придется переопределять цвет текста
   &:hover {
+    // color: $color-default-white;
     background-color: $basic-blue;
-    color: $color-default-white;
   }
 
-  @media (max-width: $vp-1024) {
-    padding: 24px 20px 20px 24px;
-    width: 47.9%;
-    min-height: auto;
+  // @media (max-width: $vp-1024) {
+  //   width: 47.9%;
+  //   min-height: auto;
+  //   padding: 24px 20px 20px 24px;
+  // }
+
+  // @media (max-width: $vp-768) {
+  //   width: 100%;
+  //   margin-bottom: 20px;
+  //   padding: 24px 20px 23px 24px;
+
+  //   &:nth-last-child(-n + 2) {
+  //     margin-bottom: 20px;
+  //   }
+
+  //   &:last-child {
+  //     margin-bottom: 0;
+  //   }
+  // }
+}
+
+.benefits__icon {
+  width: 35px;
+  height: 35px;
+  margin-bottom: 20px;
+
+  @media (max-width: $tablet) {
+    margin-bottom: 15px;
   }
 
-  @media (max-width: $vp-768) {
-    margin-bottom: 20px;
-    padding: 24px 20px 23px 24px;
-    width: 100%;
-
-    &:nth-last-child(-n+2) {
-      margin-bottom: 20px;
-    }
-
-    &:last-child {
-      margin-bottom: 0;
-    }
+  @media (max-width: $mobile) {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 15px;
   }
 }
 
-.benefits__title  {
-  margin: 15px 0 16px;
+// Расскрашиваем svg, а не path. Взаимодействия должны быть на li, а не на часть svg
+// .benefits__icon path
+.benefits__icon svg {
+  width: 100%;
+  height: 100%;
+
+  transition: 0.3s;
+
+  fill: $basic-blue;
+  // &:hover,
+  // &:focus {
+  // Смотри файл с переменными
+  // fill: $font-white;
+  // fill: $basic-grey;
+  // }
+}
+
+.benefits__item:hover svg {
+  fill: #f2f5f7;
+}
+
+// Текстовые элементы стилизуются без класса. Так как это заголовок, то меняем жирность по макету. Обнуляем верхний маргин, что бы маргины не схлопывались
+// .benefits__title
+.benefits h3 {
   position: relative;
-  font-family: $RobotoCondensed-Regular;
+  // margin: 15px 0 16px;
+
+  margin: 0 0 12px;
+
+  font-weight: 400;
   font-size: 24px;
   line-height: 34px;
+  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
+  //  font-family: $RobotoCondensed-Regular;
+  font-family: $RobotoCondensed;
   color: $basic-blue;
+
   transition: 0.3s;
 
-  @media (max-width: $vp-1024) {
-    margin: 0 0 9px;
+  // Смотрим в критериях брейкпоинты
+  // @media (max-width: $vp-1024)
+  @media (max-width: $tablet) {
+    margin: 0 0 6px;
   }
 
-  @media (max-width: $vp-768) {
+  // Смотрим в критериях брейкпоинты
+  // @media (max-width: $vp-768)
+  @media (max-width: $mobile) {
     margin: 6px 0 10px;
+
     font-size: 20px;
     line-height: 28px;
   }
 }
 
-.benefits__item:hover .benefits__title {
-  color: $color-default-white;
+.benefits__item:hover h3 {
+  color: $basic-grey;
 }
 
-.benefits__icon path {
-  fill: $basic-blue;
-  transition: 0.3s;
+// Прописыаем свойства для текста. Обнуляем маргин, что бы не было схлопываний маргинов
+.benefits p {
+  margin: 0;
 
-  // &:hover,
-  // &:focus {
-  //   fill: $font-white;
-  // }
-}
+  line-height: 22px;
+  color: $font-black;
 
-a .benefits__icon:link {
-  fill: $basic-blue;
-}
-
-a .benefits__icon:hover .benefits__icon path {
-  fill: $font-white;
-}
-
-.benefits__icon {
-  fill: $basic-blue;
-}
-
-.benefits__icon:hover {
-  fill: $font-white;
-}
-
-.benefits__icon:focus {
-  fill: $font-white;
-}
-
-.benefits__item:hover .benefits__icon path {
-  fill: $font-white;
-}
-
-.benefits__content {
-  margin-bottom: 105px;
-
-  @media (max-width: $vp-1024) {
-    margin-bottom: 57px;
+  @media (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 19px;
   }
 }
+
+.benefits__item:hover p {
+  color: $basic-grey;
+}
+
+// Цвет текста не по макету
+// .benefits__item:hover .benefits__title {
+//   color: $color-default-white;
+// }
+
+// В этом блоке нет ссылок
+// a .benefits__icon:link {
+//   fill: $basic-blue;
+// }
+
+// В этом блоке нет ссылок
+// a .benefits__icon:hover .benefits__icon path {
+//   // Смотри файл с переменными
+//   // fill: $font-white;
+//   fill: $basic-grey;
+// }
+
+// Взаимодействия должны быть на li и только hover, так как тут нет ссылок, то и focus тут тоже нет. Все прописано в ТЗ
+// .benefits__icon:hover {
+//   // Смотри файл с переменными
+//   // fill: $font-white;
+//   fill: $basic-grey;
+// }
+// .benefits__icon:focus {
+//   // Смотри файл с переменными
+//   // fill: $font-white;
+//   fill: $basic-grey;
+// }
+
+// Вложенность больше двух селекторов
+// .benefits__item:hover .benefits__icon path {
+//   // Смотри файл с переменными
+//   // fill: $font-white;
+//   fill: $basic-grey;
+// }
+
+// .benefits__content {
+//   margin-bottom: 105px;
+
+//   @media (max-width: $vp-1024) {
+//     margin-bottom: 57px;
+//   }
+// }
