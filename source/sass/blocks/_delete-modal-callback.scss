@@ -1,10 +1,6 @@
 .modal-callback__title {
   margin-top: 0;
-  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
-  // Такие миксины не рекомендуется использовать
-  // @include page-title;
   margin-bottom: 0;
-
   font-size: 28px;
   line-height: 39px;
 }

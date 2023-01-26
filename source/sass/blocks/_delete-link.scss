@@ -2,12 +2,9 @@
   display: inline-block;
   margin: 0;
   padding: 14px 28px;
-
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
-  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
-  // font-family: $RobotoCondensed-Bold;
   font-family: $RobotoCondensed;
   vertical-align: top;
   text-align: center;
@@ -15,12 +12,10 @@
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.05em;
-
   background: transparent;
   border: 1px solid transparent;
   border-radius: 3px;
   cursor: pointer;
-
   transition: 0.3s;
 }
 

@@ -102,7 +102,7 @@
   @include list-reset;
 }
 
-.accordion__list + .accordion__list {
+.accordion__list+.accordion__list {
   margin-left: 30px;
 
   @media (max-width: $tablet) {
@@ -153,57 +153,3 @@
 .accordion__sections {
   list-style: none;
 }
-
-// .accordion__toggle {
-
-//   @media (max-width: $vp-768) {
-//     transition: 0.4s;
-//     position: relative;
-//     margin-bottom: 31px;
-//     cursor: pointer;
-
-//     &::before,
-//     &::after {
-//       position: absolute;
-//       content: "";
-//       background-color: #c4c4c4;
-//     }
-
-//     // кнопка + -
-//     &::before {
-//       width: 16px;
-//       height: 1px;
-//       top: 32px;
-//       right: 15px;
-//     }
-
-//     &::after {
-//       width: 1px;
-//       height: 16px;
-//       top: 25px;
-//       right: 23px;
-//       opacity: 1;
-//     }
-
-//   }
-// }
-
-// // }
-
-// .accordion__toggle--close {
-//   &::after {
-//     opacity: 0;
-//   }
-// }
-
-// .accordion__content {
-//   @media (max-width: $vp-768) {
-//     display: none;
-//   }
-// }
-
-// .accordion__content--show {
-//   @media (max-width: $vp-768) {
-//     display: block;
-//   }
-// }
