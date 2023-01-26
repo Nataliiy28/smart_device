@@ -6,22 +6,28 @@ $color-transparent: rgba(255, 255, 255, 0);
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
-$basic-blue:#00B2FF;
-$basic-grey: #F2F5F6;
-$strok-grey: #EBEBEB;
+$basic-blue: #00b2ff;
+$basic-grey: #f2f5f6;
+$strok-grey: #ebebeb;
 
 // цвет шрифтов
-$font-white:#F2F5F6;
-$font-black:#041827;
+// Цвет прописан два раза
+// $font-white: #f2f5f6;
+$font-black: #041827;
 
 // фон
-$background-color-main:#041827;
-$background-color-whte:#F8FDFF;
-$background-color-dark-blue:#026593;
+// Цвет прописан два раза
+// $background-color-main: #041827;
+$background-color-whte: #f8fdff;
+$background-color-dark-blue: #026593;
 
 // Gradient
-$black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
-$background-tringle:rgba(4, 24, 39, 0.5)rotate(-53.1deg);
+$black-to-right: linear-gradient(
+  90deg,
+  rgba(0, 0, 0, 0.75) 0%,
+  rgba(0, 0, 0, 0) 75%
+);
+$background-tringle: rgba(4, 24, 39, 0.5) rotate(-53.1deg);
 // Typography
 // ---------------------------------
 
@@ -31,19 +37,26 @@ $fz-default: 16px;
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 
-$PTMono-Regular: "PTMono-Regular",
-"Arial",
-"sans-serif";
+// Не нужно переносить каждый шрифт на новую строчку
+// Не правильно подключены шрифты, название ОДНО, а жирность разная, ее нужно указывать в элементе, что бы применился правильный шрифт
+// $PTMono-Regular: "PTMono-Regular",
+// "Arial",
+// "sans-serif";
 
-$RobotoCondensed-Regular: "RobotoCondensed-Regular",
-"Arial",
-"sans-serif";
-$RobotoCondensed-Bold: "RobotoCondensed-Bold",
-"Arial",
-"sans-serif";
-$RobotoCondensed-Light: "RobotoCondensed-Light",
-"Arial",
-"sans-serif";
+// $RobotoCondensed-Regular: "RobotoCondensed-Regular",
+// "Arial",
+// "sans-serif";
+// $RobotoCondensed-Bold: "RobotoCondensed-Bold",
+// "Arial",
+// "sans-serif";
+// $RobotoCondensed-Light: "RobotoCondensed-Light",
+// "Arial",
+// "sans-serif";
+
+// Название файла прописываем такое же как прописано в подключении
+$PTMono: "PT Mono", "Arial", "sans-serif";
+$RobotoCondensed: "Roboto Condensed", "Arial", "sans-serif";
+
 // Animation
 // ---------------------------------
 
@@ -66,6 +79,16 @@ $vp-1280: 1280px;
 $vp-1440: 1440px;
 $vp-1920: 1920px;
 
+// По ТЗ ### Брейкпоинты
+
+// - 320px - 767px — мобильная версия;
+// - 768px - 1023px — планшетная версия;
+// - 1024px и выше — десктопная версия.
+//  Соответственно нужно применять и медиа запросы
+//  1. Для мобильный 320px - 767px
+$mobile: 767px;
+//  2. Для планшетов 768px - 1023px
+$tablet: 1023px;
 // Retina
 // ---------------------------------
 

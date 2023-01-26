@@ -17,13 +17,14 @@
   }
 }
 
-.rouble {
-  font-family: $RobotoCondensed-Regular;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
-}
+// В изначальной сборке здесь был подключен шрифт для значка рубля, тут не подойдет шрифт сайта, не нужно было менять данные свойства, либо закомментрировать, либо удалить
+// .rouble {
+//   font-family: $RobotoCondensed-Regular;
+//   /* stylelint-disable */
+//   text-transform: lowercase !important;
+//   font-weight: 400 !important;
+//   /* stylelint-enable */
+// }
 
 .visually-hidden {
   position: absolute;
