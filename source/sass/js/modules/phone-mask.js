@@ -1,5 +1,8 @@
-window.addEventListener("DOMContentLoaded", function () {
-  [].forEach.call(document.querySelectorAll('.tel'), function (input) {
+// window.addEventListener("DOMContentLoaded", function () {
+// Каждая задача должна быть в отдельном модуле
+export const initMask = function () {
+  // Ищем по data атрибуту
+  [].forEach.call(document.querySelectorAll('[data-phone]'), function (input) {
     var keyCode;
     function mask(event) {
       event.keyCode && (keyCode = event.keyCode);
@@ -32,5 +35,4 @@ window.addEventListener("DOMContentLoaded", function () {
     input.addEventListener("keydown", mask, false)
 
   });
-});
-//-----делает ввод телефона по шаблону +7 (---)***-**-**
+};
