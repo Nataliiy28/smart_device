@@ -1,23 +1,45 @@
+// Лучше использовать fixed как и было в изначально сборке
 .modal {
+  // position: absolute;
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 200;
+
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
+
   background-color: rgba($color-default-black, 0.8);
   transform: scale(1.2);
+  /*скрыть и отобразить модальное окно*/
   visibility: hidden;
   opacity: 0;
+
   transition: opacity $trans-modal, transform $trans-modal,
     visibility $trans-modal;
+
   -ms-overflow-style: none;
   pointer-events: none;
   scrollbar-width: none;
+
+  // вернем свойства которые были, данный класс технический он просто открывает и закрытвает модальное окно
+  // display: none;
+  // width: 100%;
+  // overflow-y: scroll;
+  // font-size: 16px;
+  // line-height: 22px;
+  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
+  // font-family: $PTMono-Regular;
+  // font-family: $PTMono;
+  // color: $background-color-whte;
+
+  // &--show {
+  //   display: block;
+  // }
 
   &::-webkit-scrollbar {
     display: none;
@@ -32,10 +54,24 @@
   }
 }
 
+// Вернем изначальные свойства
 .modal__wrapper {
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // box-sizing: border-box;
+  // width: 500px;
+  // height: 610px;
+  // margin-bottom: 40px;
+  // padding: 40px 40px 30px 40px;
+  // background: #00b2ff;
+  // transform: translate(-50%, -50%);
   position: relative;
+
   display: flex;
   flex-shrink: 0;
+  // justify-content: center;
+  // align-items: center;
   width: 100%;
   min-height: 100%;
   padding: 60px 40px;
@@ -49,20 +85,31 @@
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
+
   cursor: pointer;
 }
 
+// Кнопка закрыть должна быть чуть больше, что бы можно было попасть пальцем, да и по макету у нее размер 40x40. Уберем паддинг, который есть у кнопок по умолчанию и подвинем крестик по макету. Убирать шрифт нет необходимости
 .modal__close {
   position: absolute;
+  // top: 22px;
+  // right: 21px;
+  // width: 16.56px;
+  // height: 16.56px;
   top: 16px;
   right: 15px;
   z-index: 1;
+
   width: 40px;
   height: 40px;
   padding: 0;
+  // font-size: 0;
+
   background-color: transparent;
+  // border: 0;
   border: none;
   cursor: pointer;
 
@@ -72,8 +119,10 @@
     position: absolute;
     top: 50%;
     left: 50%;
+
     width: 23px;
     height: 1px;
+
     background-color: #ffffff;
     transform: translate(-50%, -50%);
   }
@@ -89,10 +138,13 @@
 
 .modal__content {
   position: relative;
+
   max-width: 500px;
   margin: 86px auto auto;
   padding: 37px 40px 43px;
+
   color: #ffffff;
+
   background-color: #00b3ff;
   border-radius: 3px;
 
@@ -103,6 +155,7 @@
 
 .modal__content h2 {
   margin: 0 0 4px;
+
   font-weight: 400;
   font-size: 30px;
   line-height: 42px;
@@ -111,6 +164,7 @@
 
 .modal__content p {
   margin: 0 0 38px;
+
   font-size: 16px;
   line-height: 22px;
 }

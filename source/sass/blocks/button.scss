@@ -1,9 +1,16 @@
 .button {
   display: inline-block;
+  // У кнопки и у ссылки нет по умолчанию маргинов, по этому однулять не нужно
+  // margin: 0;
+  //  Подкорректируем паддинг
+  // padding: 14px 28px;
   padding: 16px 26px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
+  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
+  // font-family: $RobotoCondensed-Bold;
   font-family: $RobotoCondensed;
   vertical-align: top;
   text-align: center;
@@ -11,17 +18,23 @@
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 0.05em;
+  // Лучше вместо background, прописть background-color
+  // background: transparent;
+
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 3px;
   cursor: pointer;
+
   transition: 0.3s;
+
   user-select: none;
 
   &:active {
     opacity: 0.5;
   }
 
+  // Добавим реализацию кпрозрачной кнопки с белой обводкой
   &--white-transparent {
     color: $basic-grey;
 
@@ -62,14 +75,31 @@
   }
 
   &--black {
+    // Смотри файл с переменными
+    // color: $font-white;
     color: $basic-grey;
+
     background-color: $font-black;
 
     &:hover,
     &:focus {
       color: $font-black;
+
       background-color: transparent;
       outline: none;
     }
   }
 }
+
+// .link--light-accent {
+//   color: $basic-blue;
+
+//   border-color: $basic-blue;
+
+//   &:hover,
+//   &:focus {
+//     color: $color-default-white;
+
+//     background: $basic-blue;
+//   }
+// }

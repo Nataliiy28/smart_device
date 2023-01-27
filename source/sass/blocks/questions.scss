@@ -1,20 +1,56 @@
+// Нет смысла прописывать текстовые характеристики, их нужно прописать у конкретных элементов. Корректируем отступы по макету
 .questions {
+  // padding: 93px 0 109px;
   padding: 165px 0 248px;
+  // font-size: 16px;
+  // line-height: 22px;
+  // background-image: linear-gradient(to top, rgb(207, 207, 213) 0%, rgb(135, 129, 129) 50%, rgb(207, 207, 213) 100%);
+  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
+  // font-family: $PTMono-Regular;
+  // font-family: $PTMono;
+  // Цввет текста не по макету
+  // color: $background-color-whte;
+
   color: $color-default-white;
+  // Прописываем именно фоновый цвет, а не перебиваем все фоновые характеритики
+  // background: $basic-blue;
+
   background-color: $basic-blue;
+  // Здесь нет градиента, тут именно картинка
+  // background: 8% 230px,
+  //   linear-gradient(
+  //     to bottom right,
+  //     rgba(2, 45, 79, 0.7) 30%,
+  //     20%,
+  //     $basic-blue 70%
+  //   );
   background-image: url("../img/svg/bg-questions.svg");
   background-repeat: no-repeat;
   background-position: left top -78px;
 
+  // Пишем правильные брейпоинты
+  // @media (max-width: $vp-1024)
   @media (max-width: $tablet) {
     padding: 46px 0 125px;
+    // background: $basic-blue;
+
     background-image: none;
   }
 
+  // Пишем правильные брейпоинты
+  // @media (max-width: $vp-375)
   @media (max-width: $mobile) {
     padding: 47px 0 90px;
   }
 }
+
+// .questions__narrow-container {
+//   display: flex;
+// }
+
+// .questions__wrapper-background {
+//   background-color: $background-color-dark-blue;
+// }
 
 .questions__container {
   display: grid;
@@ -34,42 +70,124 @@
   }
 }
 
+// relative не нужен, ширину убираем
 .questions__wrapper {
   padding: 0 10px;
 
+  // position: relative;
+
+  // width: 49%;
+  // margin-left: auto;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 68px;
+  //   left: -625px;
+
+  //   width: 511px;
+  //   height: 288px;
+
+  //   background: url("../../img/form/paper-airplane.svg") no-repeat center;
+  // }
+
+  // @media (max-width: 1200px) {
+  //   width: 58%;
+  // }
+
+  // Пишем правильные брейпоинты
+  // @media (max-width: $vp-1024)
   @media (max-width: $tablet) {
+    // width: 100%;
+    // margin-left: 0;
+    // padding: 0 63px;
     padding: 0;
   }
+
+  // &::before {
+  // Элемент удаляется со страницы, а не скрывается
+  // @include visually-hidden;
+  // display: none;
+  // }
+  // }
+
+  // @media (max-width: $vp-375) {
+  // padding: 0;
+  // }
 }
 
+// текст стилизуется без класса, прописываем жирность и шрифт
+// .questions__title
 .questions h2 {
+  // margin-bottom: 8px;
   margin: 0 0 12px;
+
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   font-family: $RobotoCondensed;
 
+  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
+  // @include page-title;
+
+  //   // Пишем правильные брейпоинты
+  // @media (max-width: $vp-1024)
   @media (max-width: $tablet) {
+    // margin-bottom: 16px;
     margin-bottom: 6px;
+    // font-size: 32px;
+    // line-height: 45px;
   }
 
+  //   // Пишем правильные брейпоинты и текстовые характеристики
+  // @media (max-width: $vp-375)
   @media (max-width: $mobile) {
+    // margin-bottom: 13px;
+    // font-size: 28px;
+    // line-height: 39px;
     font-size: 30px;
     line-height: 42px;
   }
 }
 
+// текст стилизуется без класса, прописываем характеристики шрифта
+// .questions__info
 .questions p {
+  // margin-bottom: 51px;
   margin: 0 0 35px;
+
   line-height: 22px;
 
+  //   // Пишем правильные брейпоинты
+  // @media (max-width: $vp-1024)
   @media (max-width: $tablet) {
+    // margin-bottom: 53px;
+    // margin-left: 5px;
     margin-bottom: 25px;
   }
 
+  // Пишем правильные брейпоинты
+  // @media (max-width: $vp-375)
   @media (max-width: $mobile) {
     margin-bottom: 35px;
+    // margin-bottom: 26px;
+    // margin-left: 0;
+
     font-size: 14px;
     line-height: 19px;
   }
 }
+
+// .questions__form {
+//   @media (max-width: $vp-1024) {
+//     margin-left: 4px;
+//   }
+
+//   @media (max-width: $vp-375) {
+//     margin-left: 0;
+//   }
+// }
+
+// .questions__agreement {
+//   margin-top: 8px;
+// }
