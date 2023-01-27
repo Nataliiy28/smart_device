@@ -1,73 +1,155 @@
+// Цифру 2022 во первых название файла не должно начинаться с цифр, во вторых это обычная фоновая картинка у блока и не у about-company, а у about-company__module. Убираем все свойства: отстпу нужно сделать на about-company__module, характеристики шрифта лучше сделать на сами элементы. Прописываем только вертикальные паддинги
 .about-company {
   padding: 70px 0;
 
+  // position: relative;
+
+  // padding-left: 180px;
+
+  // font-size: 16px;
+  // line-height: 22px;
+  // color: $font-black;
+
+  // &::before {
+  //   content: "";
+  //   position: absolute;
+  //   top: 81px;
+  //   left: -30px;
+
+  //   width: 220px;
+  //   height: 317px;
+
+  //   background: url("../../img/svg/2022.svg") no-repeat center;
+  //   background-size: 220px 317px;
+  // }
+  // Правильно прописываем брейкпоинты
   @media (max-width: $tablet) {
     padding: 37px 0 79px;
   }
+
+  // @media (max-width: $vp-768) {
+  //   padding-left: 185px;
+  // И медиа запросы пишутся по стайлгайду Академии внутри элемента, а не наоборот
+  // &::before {
+  //   top: -2px;
+  //   left: -33px;
+
+  //   width: 251.08px;
+  //   height: 361.79px;
+
+  //   background-size: 251.08px 361.79px;
+  // }
+  // }
+  // Правильно прописываем брейкпоинты
+  // @media (max-width: $vp-768)
+  // @media (max-width: $mobile) {
+  //   padding-left: 0;
+  // &::before {
+  // @include visually-hidden;
+  // }
+  // }
 }
 
+// Прописываем только те паддинги которые нужны
 .about-company__module {
   padding-bottom: 46px;
+  // padding: 53px 25px 4px 270px;
   padding-left: 270px;
+
   background-repeat: no-repeat;
   background-position: top left 16px;
   background-size: 156px 320px;
 
+  // Правильно экспортируем картинку, в макете она отрисована как png, а не svg
+  // background-image: url("../img/about-2022.png");
   @media (min-width: 768px) {
     @include retina-bg("../img/about-2022", $file_ext: "png");
   }
 
+  // Правильно прописываем брейкпоинты
   @media (max-width: $tablet) {
     padding-left: 225px;
 
     background-position: top left 42px;
   }
 
-
+  // Правильно прописываем брейкпоинты
+  // @media (max-width: $vp-768)
   @media (max-width: $mobile) {
+    //   padding: 20px 15px 25px 15px;
     background: none;
   }
 }
 
+// Текстовые блоки стилизуются без класса. Обнуляем верхний маргин. Цвет текста не по макету
+// .about-company__title
 .about-company__module h2 {
+  // margin-bottom: 19px;
   margin: 0 0 11px;
+
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
+  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
+  // font-family: $RobotoCondensed-Light;
   font-family: $RobotoCondensed;
   color: $font-black;
 
+  // Прописываем правильно брейкойнты. Текстовые характеристики не по макету
+  // @media (max-width: $vp-1024)
   @media (max-width: $tablet) {
     margin-bottom: 8px;
+
+    // font-size: 32px;
+    // line-height: 45px;
   }
 
+  // Прописываем правильно брейкойнты.
+  // @media (max-width: $vp-768)
   @media (max-width: $mobile) {
     margin-bottom: 11px;
+    // margin-bottom: 21px;
+
     font-size: 28px;
     line-height: 39px;
   }
 }
 
+// Текстовые блоки стилизуются без класса. Обнуляем маргин, что бы они не схлопывались. Текстовые характеристики не по макету
+// .about-company__text
 .about-company__module p {
+  // margin-bottom: 6px;
+  // padding-bottom: 20px;
   margin: 0 0 20px;
+
   line-height: 22px;
   color: $font-black;
 
+  // @media (max-width: $vp-1024) {
+  //   margin-left: 3px;
+  // }
+
+  // @media (max-width: $vp-768)
   @media (max-width: $mobile) {
+    // margin-bottom: 6px;
     font-size: 14px;
     line-height: 19px;
   }
 
+  // Выбираем правильный псевдокласс и корректируем по макету нижний отступ
   // &:last-child
   &:last-of-type {
     margin-bottom: 38px;
 
-
+    // Правильно прописываем брейкпоинты
     @media (max-width: $tablet) {
       margin-bottom: 17px;
     }
 
+    // Правильно прописываем брейкпоинты
     @media (max-width: $mobile) {
+      // margin-top: 0;
+      // padding-bottom: 0;
       margin-bottom: 12px;
     }
   }
@@ -83,20 +165,41 @@
   display: none;
   margin-bottom: 21px;
 
+  // @media (max-width: $vp-768) {
+  //   padding-bottom: 22px;
+  // }
+
+  // через js добаавляем классы согласно анотации в сборке см.файл main.js
   &.is-active {
     display: block;
   }
 }
 
+// .about-company__text-detalied--active {
+//   display: block;
+//   padding-bottom: 50px;
+// }
+
+// Кнопке не нужно прописывать мин ширину и верхний маргин, ширину потавить фикс, верхний маргин схлопнится с нижним маргином от верхних элементов
 .about-company__button {
   width: 180px;
 
+  // min-width: 123px;
+  // margin-top: 50px;
+
+  // Правильно прописываем брейкпоинты
+  // @media (max-width: $vp-1024)
   @media (max-width: $tablet) {
+    //   min-width: 122px;
+    //   margin: 22px 0 0 3px;
     padding: 14px;
   }
 
+  // Правильно прописываем брейкпоинты
+  // @media (max-width: $vp-768)
   @media (max-width: $mobile) {
     width: 160px;
+    //   margin: -12px 0 0 3px;
     padding: 9px;
   }
 }

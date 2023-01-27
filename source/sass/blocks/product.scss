@@ -124,6 +124,9 @@
 
   font-size: 20px;
   line-height: 30px;
+  //   // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
+  // @include page-title;
+  // font-family: $RobotoCondensed-Regular;
   font-family: $RobotoCondensed;
   color: $background-color-whte;
 }
