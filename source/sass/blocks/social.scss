@@ -5,7 +5,6 @@
   justify-content: start;
   margin: 0 0 0 12px;
   padding: 0;
-
   list-style: none;
 
   @media (max-width: $tablet) {
@@ -23,13 +22,11 @@
   align-items: center;
   width: 40px;
   height: 40px;
-
   color: $color-default-white;
 
   &:hover,
   &:focus {
     color: $basic-blue;
-
     outline: none;
   }
 
@@ -38,7 +35,6 @@
   }
 }
 
-// У иконок удалить fill в svg и path
 .social__link svg {
   fill: currentColor;
 }

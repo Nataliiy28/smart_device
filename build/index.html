@@ -9,8 +9,9 @@
   <meta name="description"
     content="Умные технологии.Smart Device.Печатные платы.Производство и монтаж, поставка комплектующих, блоков и модулей">
   <!-- подключает шрифты -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet" />
   <link rel="preload" href="./fonts/PTMono-Regular.woff" type="font/woff2" as="font" crossorigin="anonymous">
-  <link rel=" preload" href="./fonts/PTMono-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/PTMono-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="./fonts/RobotoCondensed-Regular.woff" type="font/woff2" as="font" crossorigin="anonymous">
@@ -22,10 +23,12 @@
   <link rel="apple-touch-icon" href="./favicon/favicon-180.png">
   <!-- стили -->
   <link rel="stylesheet" href="./css/style.min.css">
-  <link rel="manifest" href="./manifest.webmanifest">
+  <!-- <link rel="manifest" href="./manifest.webmanifest"> -->
+  <!-- <link rel="manifest" href="./manifest.webmanifest"> -->
 </head>
 
 <body>
+
   <div class="wrapper">
     <header class="page-header">
       <div class="page-header__background">
@@ -54,6 +57,7 @@
           </div>
           <a class="page-header__link-call button button--white-transparent" href="#"
             data-open-modal="feedback">Заказать звонок</a>
+
         </nav>
       </div>
       <section class="page-header__intro">
@@ -70,13 +74,11 @@
     <main>
       <section class="benefits">
         <div class="container benefits__container">
-
           <h2 class="visually-hidden">Преимущества компании Smart Device</h2>
           <ul class="benefits__list">
             <li class="benefits__item">
               <div class="benefits__icon">
                 <span class="visually-hidden">Иконка часов</span>
-                <!-- Правильно экспортируй все картинки и удали из их кода fill и в svg и в path, что бы можно было менять цвет иконки при наведении по макету -->
                 <svg width="35" height="35" role="img">
                   <use xlink:href="./img/sprite_auto.svg#stopwatch"></use>
                 </svg>
@@ -85,7 +87,6 @@
               <p>Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и
                 доставлять заказы плат и комплектующих в самые короткие сроки.</p>
             </li>
-            <!-- Аналогично и с другими карточками -->
             <li class="benefits__item">
               <div class="benefits__icon">
                 <span class="visually-hidden">Картинка людей</span>
@@ -171,8 +172,8 @@
           <div class="questions__image">
             <picture>
               <source type="image/webp" srcset="img/paper-airplane.webp, img/paper-airplane@2x.webp 2x">
-              <img class="form__image" src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x"
-                alt="Бумашный самолетик." width="510" height="285">
+              <img src="img/paper-airplane.png" srcset="img/paper-airplane@2x.png 2x" alt="Бумажный самолетик."
+                width="510" height="285">
             </picture>
           </div>
           <div class="questions__wrapper">
@@ -192,12 +193,14 @@
                     <input type="checkbox" name="agreement" id="agreement" checked required>
                     <label for="agreement">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
                   </div>
+
                   <button class="button button--black site-form__submit" type="submit">Задать вопрос</button>
                 </div>
               </form>
             </div>
           </div>
         </div>
+
       </section>
     </main>
     <footer class="page-footer">
@@ -321,9 +324,14 @@
         </div>
       </div>
     </section>
+
   </div>
   <script src="./js/vendor.min.js"></script>
   <script src="./js/main.min.js"></script>
+
+  <script id="__bs_script__">//<![CDATA[
+    // document.write("<script async src='/browser-sync/browser-sync-client.js?v=2.27.10'><\/script>".replace("HOST", location.hostname));
+  //]]></script>
 </body>
 
 </html>

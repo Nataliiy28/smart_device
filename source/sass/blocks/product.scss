@@ -1,12 +1,10 @@
 .product {
   position: relative;
-
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   padding: 50px 30px 53px 44px;
   overflow: hidden;
-
   background: $font-black no-repeat center;
   background-size: cover;
 
@@ -15,12 +13,9 @@
     position: absolute;
     right: 0;
     bottom: 0;
-
     width: 63px;
     height: 63px;
-
-    background: $basic-blue url("../img/svg/arrow-button-about.svg") no-repeat
-      center;
+    background: $basic-blue url("../img/svg/arrow-button-about.svg") no-repeat center;
   }
 
   @media (max-width: $vp-1024) {
@@ -112,21 +107,15 @@
   right: 0;
   bottom: 0;
   left: 0;
-
   display: block;
   min-height: 1;
-
   transition: 0.3s;
 }
 
 .product__title {
   width: 173px;
-
   font-size: 20px;
   line-height: 30px;
-  //   // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
-  // @include page-title;
-  // font-family: $RobotoCondensed-Regular;
   font-family: $RobotoCondensed;
   color: $background-color-whte;
 }
