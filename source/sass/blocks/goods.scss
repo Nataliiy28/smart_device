@@ -1,14 +1,8 @@
-// Корретируем отступы по макету
 .goods {
-  // padding: 89px 0 97px;
   padding: 38px 0 142px;
-
   color: $color-default-white;
-
   background: $font-black;
 
-  // Прописываем правильный брейкпоинт.
-  // @media (max-width: $vp-1024)
   @media (max-width: $tablet) {
     padding: 26px 0 75px;
   }
@@ -18,42 +12,26 @@
   }
 }
 
-// Текстовые элементы стилизуются без класса
-// .goods__title
+
 .goods h2 {
   margin-bottom: 51px;
-  // Ты уже подключила шрифт, зачем еще раз его подключать из миксина??, нужно прописать правильную жирность
-  // @include page-title;
-
   font-weight: 400;
   font-size: 36px;
   line-height: 51px;
-  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
-  // font-family: $RobotoCondensed-Regular;
   font-family: $RobotoCondensed;
 
-  // Прописываем правильный брейкпоинт. Текстовые характеристики не по макету
-  // @media (max-width: $vp-1024)
   @media (max-width: $tablet) {
     margin-bottom: 37px;
-
-    // font-size: 32px;
-    // line-height: 45px;
   }
 
-  // Прописываем правильный брейкпоинт. Левый маргин не нужен
-  // @media (max-width: $vp-768)
   @media (max-width: $mobile) {
     margin-bottom: 28px;
-    // margin-left: 10px;
-
     font-size: 28px;
     line-height: 39px;
   }
 }
 
-// Скрываем и показываем нужный текст в заголовке
-.goods h2 > span {
+.goods h2>span {
   &:first-child {
     @media (max-width: $mobile) {
       display: none;
@@ -69,7 +47,6 @@
   }
 }
 
-// Прописываем отступ между карточками
 .goods__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -77,58 +54,25 @@
 
   @include list-reset;
 
-  // Раз у нас изначально грид, можно его и оставить, просто поменять сетку и соответственно отсуп
   @media (max-width: $tablet) {
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: flex-start;
     grid-template-columns: 1fr;
     gap: 30px;
   }
 }
 
-// Фикс высоту и маргины убираем, они не нужны
-// .goods__item {
-// height: 620px;
-// margin-right: 30px;
-// margin-bottom: 30px;
-
-// &:last-child {
-//   margin-right: 0;
-// }
-
-// @media (max-width: $vp-1024) {
-//   width: 100%;
-//   height: 256px;
-//   margin-right: 0;
-//   margin-bottom: 46px;
-// }
-
-// @media (max-width: $vp-768) {
-//   margin-bottom: 30px;
-// }
-// }
-
 .goods__link {
   position: relative;
-
   display: block;
   min-height: 650px;
   padding: 48px 40px 60px;
-
   color: $color-default-white;
-
   background-color: $basic-blue;
   background-repeat: no-repeat;
   background-size: cover;
-
   user-select: none;
 
-  // Правильно экспортируем картинку в формате jpg и прописываем характеристики фона
-  // background-image: url("../img/goods-services/card-1-desktop.png");
   @media (min-width: 1024px) {
-    @include retina-bg(
-      "../img/goods-services/card-1-desktop",
+    @include retina-bg("../img/goods-services/card-1-desktop",
       $file_ext: "jpg"
     );
   }
@@ -151,10 +95,8 @@
     position: absolute;
     right: 0;
     bottom: 0;
-
     width: 60px;
     height: 60px;
-
     background-color: #00b2ff;
     background-image: url("../img/svg/arrow-button-about.svg");
     background-repeat: no-repeat;
@@ -177,11 +119,9 @@
   }
 }
 
-// Меняем фоновые картинки для разных карточек
 .goods__item:nth-child(2n) .goods__link {
   @media (min-width: 1024px) {
-    @include retina-bg(
-      "../img/goods-services/card-2-desktop",
+    @include retina-bg("../img/goods-services/card-2-desktop",
       $file_ext: "jpg"
     );
   }
@@ -197,8 +137,7 @@
 
 .goods__item:nth-child(3n) .goods__link {
   @media (min-width: 1024px) {
-    @include retina-bg(
-      "../img/goods-services/card-3-desktop",
+    @include retina-bg("../img/goods-services/card-3-desktop",
       $file_ext: "jpg"
     );
   }
@@ -212,7 +151,6 @@
   }
 }
 
-// Текстовые характеристики прописываем на заголовок
 .goods__link h3 {
   max-width: 173px;
   margin: 0;
@@ -225,6 +163,7 @@
   @include vp-1023 {
     max-width: 150px;
   }
+
   @include vp-767 {
     max-width: 135px;
 

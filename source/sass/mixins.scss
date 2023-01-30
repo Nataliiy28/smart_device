@@ -1,5 +1,7 @@
 @mixin retina {
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
     @content;
   }
 }
@@ -82,7 +84,8 @@
     background-image: url("#{$img_path}.webp");
   }
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
     background-image: url("#{$img_path}@2x.#{$file_ext}");
 
     @supports (background-image: url("#{$img_path}@2x.webp")) {
@@ -91,60 +94,13 @@
   }
 }
 
-@mixin font($font_name, $file_name, $weight, $style) {
-  font-style: #{$style};
-  font-weight: #{$weight};
-  font-family: $font_name;
-
-  font-display: swap;
-  src: url("../fonts/#{$file_name}.woff2") format("woff2"),
-    url("../fonts/#{$file_name}.woff") format("woff");
-}
-
-// Не нужно выдумывать новые миксины
-// @mixin font_robotocon($size, $line_height, $weight, $color) {
-//   font: {
-//     size: $size;
-//     weight: $weight;
-//   };
-//   line-height: $line_height;
-//   font-family: "Roboto Condensed", "Arial", "Helvetica", sans-serif;
-//   color: $color;
-// }
-
-// @mixin font_ptmono($size, $line_height, $weight, $color) {
-//   font: {
-//     size: $size;
-//     weight: $weight;
-//   };
-//   line-height: $line_height;
-//   font-family: "PT Mono", "Courier New", "Lucida Console", "Monaco", monospace;
-//   color: $color;
-// }
-
-// Это не миксин, это класс
-// @mixin visually-hidden {
-//   position: absolute;
-
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-//   padding: 0;
-//   overflow: hidden;
-
-//   white-space: nowrap;
-
-//   border: 0;
-
-//   clip: rect(0 0 0 0);
-//   clip-path: inset(100%);
-// }
-
-// Не нужно делать такой миксин. Так как
-// Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
-// @mixin page-title {
-//   font-family: $RobotoCondensed-Regular;
-//   font-weight: 400;
+// @mixin font($font_name, $file_name, $weight, $style) {
+//   font-style: #{$style};
+//   font-weight: #{$weight};
+//   font-family: $font_name;
+//   src: url("../fonts/#{$file_name}.woff2") format("woff2"),
+//     url("../fonts/#{$file_name}.woff") format("woff");
+//   font-display: swap;
 // }
 
 @mixin list-reset {
@@ -153,46 +109,3 @@
 
   list-style: none;
 }
-
-// Mobile first
-
-// @mixin vp-375 {
-//   @media (min-width: $vp-375) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-768 {
-//   @media (min-width: $vp-768) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1024 {
-//   @media (min-width: $vp-1024) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1280 {
-//   @media (min-width: $vp-1280) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1440 {
-//   @media (min-width: $vp-1440) {
-//     @content;
-//   }
-// }
-
-// @mixin vp-1920 {
-//   @media (min-width: $vp-1920) {
-//     @content;
-//   }
-// }
-
-// ---------------------------------
-
-// не нужно добавлять свои миксины для ресета списков, обнуления кнопок и прочие
-// этим вы усложняете работу команды, проверку вашего кода и будущую поддержку проекта

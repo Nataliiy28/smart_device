@@ -1,144 +1,60 @@
-// Уже прописано в самих элементах
-// .site-form {
-//   font-size: 16px;
-//   line-height: 22px;
-//   // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
-//   // font-family: $PTMono-Regular;
-//   font-family: $PTMono;
-//   color: $background-color-whte;
-// }
-
-// Делаем все на гридах. гап с флексом работает некорректно
 .site-form__wrapper {
-  // display: flex;
-  // gap: 14px;
-  // justify-content: space-between;
-  // align-items: flex-start;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px 30px;
   align-items: start;
 
-  // @media (max-width: $vp-768) {
-  //   gap: 3px;
-  // }
-  // Пишем правильные брейпоинты
-  // @media (max-width: $vp-375)
   @media (max-width: $mobile) {
     grid-template-columns: 1fr;
     gap: 20px;
-    // flex-direction: column;
-    // justify-content: flex-start;
   }
-
-  // &--submit {
-  //   @media (max-width: $vp-1024) {
-  //     justify-content: flex-start;
-  //   }
-  // }
 }
 
-// для какой цели? Не нужно
-// .site-form input,
-// .site-form textarea,
-// .site-form select {
-//   appearance: none;
-// }
-
-// border-box уже прописан для всех элементов
-// Добавим ширину, цвет текста не по макету, уберем бордер и пропишем радиус по макету
 .site-form input,
 .site-form textarea {
   width: 100%;
-  // box-sizing: border-box;
-  // margin-bottom: 19px;
   padding: 14px 16px;
-
   font-size: 16px;
   line-height: 22px;
-  // Не правильно подключен шрифт, смотри файл с переменными и файл с подключением шрифтов
-  // font-family: $PTMono-Regular;
   font-family: $PTMono;
-  // color: $background-color-whte;
   color: $color-default-white;
-
   background: rgba(4, 20, 39, 0.15);
-  // border: 1px solid transparent;
   border: none;
   border-radius: 3px;
-
   transition: 0.3s;
 
-  // @media (max-width: $vp-1024) {
-  //   padding: 15px 18px;
-  // }
-
-  // @media (max-width: $vp-375) {
-  //   margin-bottom: 31px;
-  //   padding: 13px 18px 16px 17px;
-  // }
-
-  // Сделаем обводку через outline
   &:hover,
   &:focus {
-    // border: 1px solid #ffffff;
-    // outline: none;
     outline: 1px solid #041427;
   }
 
-  // Для элементов формы нужно добавить disabled
   &:disabled {
     opacity: 0.5;
   }
 }
 
-// Не по макету
+
 .site-form input::placeholder,
 .site-form textarea::placeholder {
-  // color: $background-color-whte;
   color: $color-default-white;
-
   opacity: 1;
 }
 
-// .site-form input {
-//   width: 100%;
-
-//   @media (max-width: $vp-375) {
-//     width: 100%;
-//   }
-// }
-
-// Пропишем для сетки линии, фикс высоту, ровняем по макету
 .site-form textarea {
   grid-column: 1/-1;
-  // min-height: 154px;
   height: 155px;
   padding-top: 24px;
-
   resize: none;
 
-  // Пишем правильные брейпоинты
-  // @media (max-width: $vp-1024)
   @media (max-width: $tablet) {
-    //   min-height: 161px;
     padding-top: 30px;
   }
 
-  // Пишем правильные брейпоинты
-  // @media (max-width: $vp-375)
   @media (max-width: $mobile) {
-    // min-height: 104px;
     height: 180px;
     padding-top: 23px;
-    // margin-bottom: 24px;
   }
 }
-
-// Чекбокс скрывать не нужно, изменяем сам инпут
-// .site-form input[type="checkbox"] {
-//   @include visually-hidden;
-// }
 
 .site-form__checkbox {
   display: grid;
@@ -158,108 +74,59 @@
   }
 }
 
-// Пропишем корректно селектор, текстовые характеристики по макету
-// .site-form input[type="checkbox"] + label
 .site-form__checkbox label {
   position: relative;
-
   font-size: 14px;
   line-height: 16px;
   color: rgba(255, 255, 255, 0.8);
-
   cursor: pointer;
-
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 1px;
-  //   left: -32px;
-
-  //   width: 14px;
-  //   height: 14px;
-
-  //   border: 1px solid #ffffff;
-  // }
-
-  // @media (max-width: $vp-375) {
-  //   margin-left: 34px;
-  // }
 }
 
-// .site-form input[type="checkbox"]:checked + label {
-//   &::before {
-//     // background: url("../img/icons/checkbox-icon.svg") no-repeat center;
-//     background: url("../img/svg/checkbox-arrow.svg") no-repeat center;
-//   }
-// }
 .site-form__checkbox input[type="checkbox"] {
   width: 15px;
   height: 15px;
   margin-top: 7px;
   padding: 0;
-
   background-color: $basic-blue;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 7px 4px;
   border: 1px solid $color-default-white;
   border-radius: 2px;
-
   appearance: none;
 
   @media (max-width: $mobile) {
     margin-top: 0;
   }
 
-  // Промежуточный брейкпоинт
   @media (max-width: 425px) {
     margin-top: 7px;
   }
 }
 
-// Так как картинка не участвует в спрайте, должна находится в соответствующей папку и прописано правильно название картикни
 .site-form__checkbox input[type="checkbox"]:checked {
   background-image: url("../img/svg/checkbox-arrow.svg");
 }
 
-// Пропишем block, макс ширину, border, текстовые характеристики
-// .site-form button[type="submit"]
 .site-form__submit {
-  // min-width: 270px;
   display: block;
   width: 100%;
   max-width: 265px;
-  // margin-right: 70px;
-  // margin-bottom: 20px;
   margin-top: 15px;
   padding: 12px;
-
   font-size: 16px;
   line-height: 19px;
-
   background-color: $font-black;
   border: 1px solid $font-black;
-
-  // Пишем правильные брейпоинты
-  // @media (max-width: $vp-1024)
 
   @media (max-width: $tablet) {
     padding: 15px 15px 9px;
   }
 
   @media (max-width: $mobile) {
-    // min-width: 280px;
-    // margin-right: 73px;
     max-width: 270px;
     margin-top: 10px;
   }
-
-  // @media (max-width: $vp-375) {
-  //   width: 100%;
-  //   min-width: 100%;
-  //   margin-right: 0;
-  //   margin-bottom: 23px;
-  // }
 }
 
 .site-form__agreement {
@@ -273,7 +140,6 @@
   }
 }
 
-// Что бы убрать значок от lassPass
 [data-lastpass-icon-root] {
   display: none;
 }
