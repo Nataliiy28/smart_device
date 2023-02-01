@@ -17,6 +17,8 @@
   cursor: pointer;
   transition: 0.3s;
   user-select: none;
+  white-space: nowrap;
+  overflow: hidden;
 
   &:active {
     opacity: 0.5;
