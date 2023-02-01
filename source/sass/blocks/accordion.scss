@@ -72,7 +72,7 @@
 
 .accordion__title h2 {
   margin: 0;
-
+  font-weight: 400;
   font-size: 15px;
   line-height: 16px;
   font-family: $RobotoCondensed;
@@ -102,7 +102,7 @@
   @include list-reset;
 }
 
-.accordion__list + .accordion__list {
+.accordion__list+.accordion__list {
   margin-left: 30px;
 
   @media (max-width: $tablet) {
